@@ -12,10 +12,12 @@
         <div class="search-container">
             <input type="text" class="search-input" placeholder="검색어를 입력하세요">
             <button class="search-button">
-            <img src="img/search.png" alt="search-img" class="search-img">
-        </button>
+                <img src="img/search.png" alt="search-img" class="search-img">
+            </button>
         </div>
-        <button onclick="openPopup()" class="login-button">로그인</button>
+        <div id = login>
+            <button onclick="openPopup()" class="login-button">로그인</button>
+        </div>
         <div id="popup" class="popup-overlay">
             <div class="popup-content">
                 <span onclick="closePopup()" class="close-btn">&times;</span>
@@ -27,7 +29,11 @@
                 </form>
                 <a href="signup.html" class="signup-button">회원가입</a>
             </div>
-            </div>
+        </div>
+        <div id = logout>
+            <button onclick="goToProfile()">프로필 관리</button>
+            <button onclick="logout()">로그아웃</button>
+        </div>
     </div>
 
     <div class="category-container"> <!--카테고리 버튼 7개-->

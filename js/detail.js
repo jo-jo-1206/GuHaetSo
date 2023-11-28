@@ -1,3 +1,23 @@
+const reviewscore = document.getElementById("number");
+const reviewStar = document.querySelector(".review-button");
+let number = reviewscore.innerText;
+let chk = false;
+console.log(reviewStar.innerText);
+
+function review(){
+  if(chk) {
+    number = (parseInt(number) - 1);
+    reviewStar.innerHTML = `<span id="number">${number}</span>☆`;
+  }
+  else {
+    number = parseInt(number) + 1;
+    reviewStar.innerHTML = `<span id="number">${number}</span>★`;
+  }
+  chk = !chk;
+}
+
+
+
 // 슬라이크 전체 크기(width 구하기)
 const slide = document.querySelector(".banner");
 let slideWidth = slide.clientWidth;

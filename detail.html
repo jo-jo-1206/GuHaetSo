@@ -16,7 +16,9 @@
                 <img src="img/search.png" alt="search-img" class="search-img">
             </button>
         </div>
-        <button onclick="openPopup()" class="login-button">로그인</button>
+        <div id = login>
+            <button onclick="openPopup()" class="login-button">로그인</button>
+        </div>
         <div id="popup" class="popup-overlay">
             <div class="popup-content">
                 <span onclick="closePopup()" class="close-btn">&times;</span>
@@ -28,6 +30,10 @@
                 </form>
                 <a href="signup.html" class="signup-button">회원가입</a>
             </div>
+        </div>
+        <div id = logout>
+            <button onclick="goToProfile()">프로필 관리</button>
+            <button onclick="logout()">로그아웃</button>
         </div>
     </div>
     <div class="detail-container">
@@ -72,7 +78,8 @@
                 </div>
             </div>
             <div class="review-container">
-                <button class="review">12345 ★</button>
+                <h3> 별점을 남겨주세요 </h3>
+                <button onclick="review()" class="review-button"><span id ="number">0<span></span>☆</button>
             </div>
         </div>
     </div>

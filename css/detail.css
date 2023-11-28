@@ -30,6 +30,9 @@
 
 .profile-container{
     width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .person-container{
@@ -39,7 +42,8 @@
     flex-wrap: nowrap;
     justify-content: center;
     max-width: 1024px;
-    margin: auto;
+    border: 2px solid #cccc;
+    border-radius : 2px;
 }
 
 .person-container ul {
@@ -58,15 +62,23 @@
     width: 154px;
     height: 154px;
     border-radius: 100%;
+    margin: 20px
 }
 
 .review-container{
     margin-top:20px;
+    border : 2px solid #cccc;
+    border-radius : 2px;
+    width: 100%;
 }
-.review{
+
+.review-container button{
+    background-color: white;
+    border: none;
     font-size: 12pt;
     width: 100%;
-    height:auto;
+    height: 50px;
+
 }
 
 .banner {
@@ -179,4 +191,6 @@
     font-size: 12pt;
     margin-top: 20px;
     margin-bottom: 20px;
+    border: 2px solid #cccc;
+    border-radius: 2px;
 }

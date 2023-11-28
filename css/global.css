@@ -65,6 +65,20 @@ body{
     margin-right: 30px;
 }
 
+#logout button{
+  padding: 5px 10px;
+  background-color: white;
+  font-size:15pt;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+#logout{
+  margin-right: 30px
+}
+
 a {
     text-decoration: none;
     color: black;
