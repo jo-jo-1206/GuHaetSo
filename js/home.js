@@ -1,3 +1,21 @@
+//카테고리 버튼 클릭 시 해당 카테고리로 이동
+function assignButtonClickEvent(category) {
+  document.querySelectorAll('.' + category).forEach(function(button) {
+    button.addEventListener('click', function() {
+      window.location.href = 'category.html?category=' + category;
+    });
+  });
+}
+
+//버튼 할당
+assignButtonClickEvent('car-repair');
+assignButtonClickEvent('interior');
+assignButtonClickEvent('lesson');
+assignButtonClickEvent('making');
+assignButtonClickEvent('dog');
+assignButtonClickEvent('clean');
+assignButtonClickEvent('sport');
+
 // 슬라이크 전체 크기(width 구하기)
 const slide = document.querySelector(".banner");
 let slideWidth = slide.clientWidth;

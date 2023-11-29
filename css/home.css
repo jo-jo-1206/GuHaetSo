@@ -1,7 +1,3 @@
-.category-button > a {
-    color: black;
-}
-
 .button-img{
     width:32px;
     height: 32px;
@@ -23,6 +19,7 @@
     min-width: 67px;
     max-width: 154px;
     min-height: 87px;
+    cursor: pointer;
 }
 
 .category-container{
@@ -50,6 +47,7 @@
     margin: auto;
     max-width: 851px;
     max-height: 309px;
+    cursor: pointer;
 }
 
 .banner-item{
