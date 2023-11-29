@@ -1,49 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GuHaetSo</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="home.css">
+    <title>구했소</title>
+    <meta charset="UTF-8" name = "viewport" content = "width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
     <div class="menu-container"> <!-- 메뉴바 -->
-        <img src="/img/logo.jpg" alt="Logo" class="logo">
+        <a href="home.html"><img src="img/logo.jpg" alt="Logo" class="logo"></a>
         <div class="search-container">
-            <input type="text" class="search-input" placeholder="카테고리 검색">
+            <input type="text" class="search-input" placeholder="검색어를 입력하세요">
             <button class="search-button">
-            <img src="/img/search.png" alt="search-img" class="search-img">
-        </button>
+                <img src="img/search.png" alt="search-img" class="search-img">
+            </button>
         </div>
-        <button class="login-button">로그인</button>
+        <div id = login>
+            <button onclick="openPopup()" class="login-button">로그인</button>
+        </div>
+        <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+                <span onclick="closePopup()" class="close-btn">&times;</span>
+                <h2>로그인</h2>
+                <form action="login">
+                    <input type="text" name="id" placeholder="아이디">
+                    <input type="password" name="pw" placeholder="비밀번호">
+                    <input type="submit" value="로그인">
+                </form>
+                <a href="signup.html" class="signup-button">회원가입</a>
+            </div>
+        </div>
+        <div id = logout>
+            <button onclick="goToProfile()">프로필 관리</button>
+            <button onclick="logout()">로그아웃</button>
+        </div>
     </div>
 
     <div class="category-container"> <!--카테고리 버튼 7개-->
+        <!-- detail.html 로 이동하는 임시 버튼  
+        <a href="detail.html" class="category-button car-repair">
+            <img src="img/car-repair.png" alt="Button 1" class="button-img">
+            <span class="button-text">디테일 페이지 확인</span>
+        </a>
+        -->
         <button class="category-button car-repair">
-            <img src="/img/car-repair.png" alt="Button 1" class="button-img">
+            <img src="img/car-repair.png" alt="Button 1" class="button-img">
             <span class="button-text">자동차 정비</span>
         </button>
         <button class="category-button interior">
-            <img src="/img/home.png" alt="Button 2" class="button-img">
+            <img src="img/home.png" alt="Button 2" class="button-img">
             <span class="button-text">인테리어</span>
         </button>
         <button class="category-button lesson">
-            <img src="/img/lesson.png" alt="Button 3" class="button-img">
+            <img src="img/lesson.png" alt="Button 3" class="button-img">
             <span class="button-text">레슨</span>
         </button>
         <button class="category-button making">
-            <img src="/img/making.png" alt="Button 4" class="button-img">
+            <img src="img/making.png" alt="Button 4" class="button-img">
             <span class="button-text">제작의뢰</span>
         </button>
         <button class="category-button dog">
-            <img src="/img/dog.png" alt="Button 5" class="button-img">
+            <img src="img/dog.png" alt="Button 5" class="button-img">
             <span class="button-text">돌보미</span>
         </button>
         <button class="category-button clean">
-            <img src="/img/clean.png" alt="Button 6" class="button-img">
+            <img src="img/clean.png" alt="Button 6" class="button-img">
             <span class="button-text">청소, 방역</span>
         </button>
         <button class="category-button sport">
-            <img src="/img/soccer-ball.png" alt="Button 7" class="button-img">
+            <img src="img/soccer-ball.png" alt="Button 7" class="button-img">
             <span class="button-text">스포츠 용역</span>
         </button>
     </div>
@@ -57,6 +82,8 @@
         <div class="banner-next-button banner-button">></div>
         <ul class="banner-pagination"></ul>
     </div>
-        <script src="home.js"></script>
+    <a href="detail.html"> -> 디테일 페이지로</a>
+        <script src="js/home.js"></script>
+        <script src="js/global.js"></script>
     </body>
 </html>
