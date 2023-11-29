@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>구했소</title>
+    <meta charset="UTF-8" name = "viewport" content = "width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+
+<body>
+    <div class="menu-container"> <!-- 메뉴바 -->
+        <a href="home.html"><img src="img/logo.jpg" alt="Logo" class="logo"></a>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="검색어를 입력하세요">
+            <button class="search-button">
+                <img src="img/search.png" alt="search-img" class="search-img">
+            </button>
+        </div>
+        <div id = login>
+            <button onclick="openPopup()" class="login-button">로그인</button>
+        </div>
+        <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+                <span onclick="closePopup()" class="close-btn">&times;</span>
+                <h2>로그인</h2>
+                <form action="login">
+                    <input type="text" name="id" placeholder="아이디">
+                    <input type="password" name="pw" placeholder="비밀번호">
+                    <input type="submit" value="로그인">
+                </form>
+                <a href="signup.html" class="signup-button">회원가입</a>
+            </div>
+        </div>
+        <div id = logout>
+            <button onclick="goToProfile()">프로필 관리</button>
+            <button onclick="logout()">로그아웃</button>
+        </div>
+    </div>
+    <div class="detail-container">
+        <div class="explain-container">
+            <div class="banner">
+                <div class="banner-item item1">1</div>
+                <div class="banner-item item2">2</div>
+                <div class="banner-item item3">3</div>
+                <div class="banner-item item4">4</div>
+                <div class="banner-item item5">5</div>
+                <div class="banner-prev-button banner-button">◀</div>
+                <div class="banner-next-button banner-button">▶</div>
+                <ul class="banner-pagination"></ul>
+            </div>
+            <div class="explain-text">
+                <div class="explain-title title">만족도 높은 보컬 레슨</div>
+                <div class="explain-content content">
+                    <p>
+                        1. 흔들림 없는 음정 훈련
+                        <br> --- <br> --- <br>
+                        2. 돌고래보다 높은 고음 훈련
+                        <br> --- <br> --- <br>
+                        3. 누구보다 빠른 랩 훈련
+                        <br> --- <br> --- <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="profile-container">
+            <div class="person-container">
+                <div class="person-img"></div>
+                <div class="person-title title">싸이</div>
+                <div class="person-content content">
+                    <ul>
+                        <li>010-1234-5678</li>
+                        <li>psy@naver.com</li>
+                        <li>P-nation 대표</li>
+                        <li>싸이쇼 티켓 매진</li>
+                        <li> -- 약력3</li>
+                        <li> -- 약력4</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="review-container">
+                <h3> 별점을 남겨주세요 </h3>
+                <button onclick="review()" class="review-button"><span id ="number">0<span></span>☆</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/detail.js"></script>
+    <script src="js/global.js"></script>
+</body>
+
+</html>
