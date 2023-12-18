@@ -1,6 +1,6 @@
 .logo {
-    width: 100px;
-    height: 50px;
+    width: auto;
+    height: 86px;
 }
 
 .title-container{
@@ -13,35 +13,104 @@
     margin: auto;
 }
 
-.input-container{
+.sign-up-container{
     width:100%;
     display: flex;
     flex-direction: column;
     flex-wrap : wrap;
-    justify-content: space-between;
     align-items: center;
-    max-width: 676px;
-    min-height: 500px;
+    max-width: 448px;
     margin: auto;
+    border-radius : 10px;
+    border : 1px solid black;
+    margin-top : 42px;
+    font-size : 14px;
+}
+
+.input-container{
+    width: 66%;
+
+}
+
+.sign-up-container h3{
+    margin-top : 24px;
+    font-size : 18px;
 }
 
 .input-container > input, select {
     width: 100%;
-    height: 40px;
-    font-size: 1em
+    height: 38px;
+    border : 1px solid #d9d9d9;
+    border-radius : 10px;
+    padding : 0;
 }
 
-h3 {
-    margin-bottom : 2px;
+.input-container h3{
+    font-size : 14px;
+    margin-top: 24px;
+    margin-bottom: 5px;
+    font-weight: bolder;
 }
+
+.input-container > input::placeholder{
+    font-size : 14px;
+    padding-left : 10px;
+}
+
 .input-container input[type="submit"]{
-    margin-top : 20px;
+    margin : 48px 0 48px 0;
     align-self : flex-end;
-    max-width: 162px;
-    height: 49px;
+    width : 100%;
+    height: 38px;
     border: none;
-    border-radius: 3px;
-    background-color: dimgray;
+    padding : 0;
+    border-radius: 10px;
+    background-color: #d9d9d9;
     color: #fff;
     cursor: pointer;
+    font-size : 16px;
   }
+
+.input-container input[type="submit"].filled{
+    background-color: black;
+}
+
+.error-message{
+    color : red;
+    font-size : 12px;
+    margin-top : 5px;
+    margin-bottom : 5px;
+}
+
+.complete-signup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.complete-signup h2{
+    text-align: center;
+    margin-top: -30px;
+    background-color: white;
+    padding : 30px 50px 100px 50px;
+    border-radius : 10px;
+}
+
+.complete-signup button#okButton{
+    position: fixed;
+    padding : 12px 30px;
+    border-radius : 10px;
+    border: none;
+    background-color : black;
+    color: white;
+    top : 48%;
+    font-size:16px;
+}
+
