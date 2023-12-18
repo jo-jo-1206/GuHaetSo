@@ -17,7 +17,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    max-width: 900px;
+    max-width: 1100px;
     border: 0px;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .profile-container{
-    width: 200px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -43,7 +43,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;    
-    max-width: 1024px;
+    max-width: 500px;
     border: 0px solid #cccc;
     border-radius : 0px;
 }
@@ -84,7 +84,7 @@
 
 .banner {
     position: relative;
-    width: 100%;
+    width: 1000px;
     height: 300px;
     overflow: hidden;
 
@@ -117,21 +117,21 @@
     justify-content:center;
     align-items: center;
     position: absolute;
-    top: calc(50% - 16px);
+    top: calc(50% - 20px);
     color: white;
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     border-radius: 100%;
     background-color: #cccc;
     cursor: pointer;
 }
 
 .banner-prev-button{
-    left: 10px;
+    left: 11px;
 }
 
 .banner-next-button{
-    right: 10px;
+    right: 11px;
 }
 
 .banner-item.item1{
@@ -191,10 +191,14 @@
 
 .explain-text{
     font-size: 12pt;
+    text-align: left;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 2px solid #cccc;
+    border: 0px;
     border-radius: 2px;
+}
+.explain-title title{
+    text-align: left;
 }
 .person-content content{
     width: 230px;
