@@ -156,11 +156,34 @@ ul,li{
 
 .top10 > h4 {
     font-size : 20px;
-margin: 0;
+    margin: 0;
+    margin-bottom: 30px;
 }
 
 .content-container{
     display: flex;
+    flex-wrap: wrap;
     align-items:flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
+    font-size : 14px;
+    font-weight: bold;
+    max-width: 988px;
+}
+
+.content-text > p{
+    margin-top : 10px;
+}
+
+.content{
+    max-width: 178px;
+    max-height: 151px;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+.content > img{
+    width: 178px;
+    height: 118px;
+    border-radius : 10px;
+    background-color : #d9d9d9;
 }

@@ -20,11 +20,21 @@
     float: left;
 }
 
+.category-list > h3 {
+    font-size : 22px;
+    font-weight: bold;
+    margin-block-end: 1em;
+}
+
+.category-list > h4{
+    font-weight: bold;
+}
+
 .category-big {
     padding: 0;
     margin: 0;
     font-weight: normal;
-    font-size: 1.17em;
+    font-size: 14px;
 }
 
 .category-small {
@@ -43,7 +53,7 @@
     padding: 0;
     margin: 0;
     font-weight: normal;
-    font-size: 1.17em;
+    font-size: 14px;
     color: #808080;
 }
 
@@ -173,6 +183,7 @@ ul li {
     width:178px;
     height:155px;
     padding : 10px;
+    margin-bottom: 20px;
 }
 
 .sample-image {
@@ -186,4 +197,15 @@ ul li {
 .card-name{
     margin-bottom : 2px;
     font-size: 12px;
+}
+
+
+.category-small button.selected{
+    color: black;
+    font-weight: bold;
+}
+
+button,span {
+    display: inline; /* 인라인 요소로 표시 */
+    white-space: nowrap; /* 텍스트가 한 줄로 유지되도록 설정 */
 }
