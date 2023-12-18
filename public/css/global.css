@@ -29,8 +29,8 @@ body {
 }
 
 .logo {
-  width: 100px;
-  height: 50px;
+  width:auto;
+  height: 62px;
 }
 
 .search-container {
