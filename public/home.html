@@ -10,13 +10,15 @@
     <div class="menu-container"> <!-- 메뉴바 -->
         <a href="home.html"><img src="img/logo.jpg" alt="Logo" class="logo"></a>
         <div class="search-container">
-            <input type="text" class="search-input" placeholder="검색어를 입력하세요">
             <button class="search-button">
                 <img src="img/search.png" alt="search-img" class="search-img">
             </button>
+            <input type="text" class="search-input" placeholder="검색어를 입력하세요">
+
         </div>
-        <div id = login>
+        <div id=login>
             <button onclick="openPopup()" class="login-button">로그인</button>
+            <a href="signup.html" class="signup-button">회원가입</a>
         </div>
         <div id="popup" class="popup-overlay">
             <div class="popup-content">
@@ -27,12 +29,11 @@
                     <input type="password" name="pw" placeholder="비밀번호">
                     <input type="submit" value="로그인">
                 </form>
-                <a href="signup.html" class="signup-button">회원가입</a>
             </div>
         </div>
-        <div id = logout>
-            <button onclick="goToProfile()">프로필 관리</button>
+        <div id=logout>
             <button onclick="logout()">로그아웃</button>
+            <button onclick="goToProfile()">마이페이지</button>
         </div>
     </div>
 
@@ -43,6 +44,16 @@
             <span class="button-text">디테일 페이지 확인</span>
         </a>
         -->
+        <div class="banner banner-container"> <!--신장개업 홍보 배너-->
+            <div class="banner-item item1">1</div>
+            <div class="banner-item item2">2</div>
+            <div class="banner-item item3">3</div>
+            <div class="banner-item item4">4</div>
+            <div class="banner-item item5">5</div>
+            <div class="banner-prev-button banner-button">◁</div>
+            <div class="banner-next-button banner-button">▷</div>
+            <ul class="banner-pagination"></ul>
+        </div>
         <button class="category-button car-repair">
             <img src="img/car-repair.png" alt="Button 1" class="button-img">
             <span class="button-text">자동차 정비</span>
@@ -72,17 +83,15 @@
             <span class="button-text">스포츠 용역</span>
         </button>
     </div>
-    <div class="banner banner-container"> <!--신장개업 홍보 배너-->
-        <div class="banner-item item1">1</div>
-        <div class="banner-item item2">2</div>
-        <div class="banner-item item3">3</div>
-        <div class="banner-item item4">4</div>
-        <div class="banner-item item5">5</div>
-        <div class="banner-prev-button banner-button"><</div>
-        <div class="banner-next-button banner-button">></div>
-        <ul class="banner-pagination"></ul>
+    
+    <div class="top10"> <!--컨텐츠-->
+        <h3> TOP 10 </h3>
+        <h4> 이번주 인기 서비스를 확인해보세요 </h4>
+
+        <div class="content-container">
+
+        </div>
     </div>
-    <a href="detail.html"> -> 디테일 페이지로</a>
         <script src="js/home.js"></script>
         <script src="js/global.js"></script>
     </body>

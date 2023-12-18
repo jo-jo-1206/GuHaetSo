@@ -1,16 +1,20 @@
 body {
   padding-top: 100px;
-  max-width: 1024px;
+  max-width: 988px;
   
   margin-right : auto;
   margin-left : auto;
+
+  
+  font-family: 'Inter';
+  font-style: normal;
 }
 
 .menu-container {
   position: fixed;
   top: 0;
   width: 100%;
-  max-width: 1024px;
+  max-width: 988px;
   left: 0;
   right: 0;
   background-color: white;
@@ -70,13 +74,13 @@ body {
 }
 
 #login{
-  font-size : 14px;
+  font-size: 14px;
 }
 
 .login-button {
   padding: 5px 10px;
   background-color: white;
-  font-size: 15px;
+  font-size: 14px;
   color: black;
   border: none;
   cursor: pointer;
@@ -84,20 +88,19 @@ body {
   margin-right: 30px;
 }
 
+#logout{
+  font-size : 14px;
+}
 #logout button {
   padding: 5px 10px;
   background-color: white;
-  font-size: 15px;
+  font-size: 14px;
   color: black;
   border: none;
   cursor: pointer;
   border-radius: 2px;
 }
 
-#logout {
-  margin-right: 30px;
-  font-size : 14px;
-}
 
 a {
   text-decoration: none;
