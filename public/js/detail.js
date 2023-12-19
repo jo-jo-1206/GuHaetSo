@@ -242,82 +242,13 @@ assignButtonClickEvent('dog');
 assignButtonClickEvent('clean');
 assignButtonClickEvent('sport');
 
-// URL에서 쿼리 매개변수(category) 가져오기
-const params = new URLSearchParams(window.location.search);
-const category = params.get('category');
-
-//보여줄 카테고리 리스트
-let carRepair = [['부품교체','타이어','오일','필터','브레이크 패드'],['자동차 검사','전체 검사','부분 검사'],['세차 및 도색','세차','도색']]
-let making = [['디자인','명함','전단지','메뉴판','현수막'],['핸드메이드','뜨개질','쥬얼리','3D 프린팅']]
-let lesson = [['운동','필라테스','PT','요가','크로스핏'],['음악','댄스','보컬','악기연주'],['그림','수채화','유화','디지털','크로키','서예']]
-let interior = [['인테리어','필름,타일 시공','도배, 장판','조명','줄눈, 코킹','견적 상담']]
-let pet = [['펫시터','탁묘, 탁견','방문 돌봄','산책','훈련'], ['미용','방문 미용','미용실']]
-let clean = [['방문청소','에어컨 청소','입주청소','일반 청소','하수구 청소'],['방역','바퀴벌레','개미','그 외']]
-let sports = [['스포츠 용역','축구','농구','야구','배구','배드민턴','기타']]
-// category-list div 요소 찾기
-
-const categoryContainer = document.querySelector('.category-list');
-
-//category-list의 항목을 바꾸는 함수 
-function addNewCategory(categoryTitle, categoryList) {
-  
-  categoryContainer.innerHTML = '';
-
-  const mainTitle = document.createElement('h3');
-  mainTitle.textContent = categoryTitle;
-  categoryContainer.appendChild(mainTitle);
-
-  for (let i = 0; i < categoryList.length; i++){
-
-      const newCategory = document.createElement('div');
-      newCategory.classList.add('category-list');
-
-      const title = document.createElement('h4');
-      title.classList.add("category-big")
-      title.textContent = categoryList[i][0];
-      newCategory.appendChild(title);
-
-      const categorySmall = document.createElement('div');
-      categorySmall.classList.add('category-small');
-      newCategory.appendChild(categorySmall);
-
-      for (let j = 1; j < categoryList[i].length; j++) {
-          const element = document.createElement('button');
-          element.textContent = categoryList[i][j];
-          categorySmall.appendChild(element);
-      }
-
-      categoryContainer.appendChild(newCategory);
-  }
-}
-
-
-// category 매개변수에 따라서 적절한 배열을 사용하여 요소 추가
-switch (category){
-  case 'clean' : 
-      addNewCategory('청소 / 방역', clean);
-      break;
-  case 'car-repair' :
-      addNewCategory('자동차 수리', carRepair);
-      break;
-  case 'making' :
-      addNewCategory('제작의뢰', making);
-      break;
-  case 'lesson' :
-      addNewCategory('취미 레슨', lesson);
-      break;
-  case 'interior' :
-      addNewCategory('인테리어', interior);
-      break;
-  case 'dog' :
-      addNewCategory('돌보미', pet);
-      break;
-  case 'sport' :
-      addNewCategory('스포츠 용역', sports);
-      break;
-  default :
-      alert ('잘못된 접근입니다.');
-      break;
+//카테고리 버튼 클릭 시 해당 카테고리로 이동
+function assignButtonClickEvent(category) {
+  document.querySelectorAll('.' + category).forEach(function(button) {
+    button.addEventListener('click', function() {
+      window.location.href = 'category.html?category=' + category;
+    });
+  });
 }
 
 // 전체 카테고리 버튼을 눌렀을 때 카테고리 메뉴 표시 
