@@ -34,7 +34,7 @@
             </div>
         </div>
         <div id=logout>
-            <button onclick="logout()">로그아웃</button>
+            <button id="logout-button" onclick="logout()">로그아웃</button>
             <button onclick="goToProfile()">마이페이지</button>
         </div>
     </div>
@@ -279,6 +279,63 @@
             <!--여기까지 샘플-->
         </div>
     </div>
+    
+    <!-- 모바일 햄버거 버튼 -->
+    <div class="navbar_overlay"></div>
+
+    <div class="navbar_burger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+    </div>
+    <div class="navbar_menu">
+        <hr>
+        <div class="big-category">
+            <button>카테고리</button>
+            <svg class="svg-category" xmlns="http://www.w3.org/2000/svg" width="24" height="12" viewBox="0 0 24 12">
+                <path d="M2 2 L12 10 L22 2" stroke="black" stroke-width="2" fill="none" />
+            </svg>
+        </div>
+
+        <div class="category-container-mobile">
+            <button class="category-button car-repair">
+                <span class="button-text">・ 자동차 정비</span>
+            </button>
+            <button class="category-button interior">
+                <span class="button-text">・ 인테리어</span>
+            </button>
+            <button class="category-button lesson">
+                <span class="button-text">・ 레슨</span>
+            </button>
+            <button class="category-button making">
+                <span class="button-text">・ 제작의뢰</span>
+            </button>
+            <button class="category-button dog">
+                <span class="button-text">・ 돌보미</span>
+            </button>
+            <button class="category-button clean">
+                <span class="button-text">・ 청소, 방역</span>
+            </button>
+            <button class="category-button sport">
+                <span class="button-text">・ 스포츠 용역</span>
+            </button>
+        </div>
+
+        <a href="home.html">공지사항</a>
+        <a href="home.html">FAQ</a>
+        <a href="home.html">이벤트</a>
+        <div class="navbar_burger_back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
+
+        </div>
+    </div>
+    
     <script src="js/category.js"></script>
     <script src="js/global.js"></script>
 </body>
