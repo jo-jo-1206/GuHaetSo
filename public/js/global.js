@@ -1,4 +1,22 @@
-document.getElementById("logout").style.display = "none";
+if (window.location.href.indexOf('mypage.html') === -1) {
+  document.getElementById("logout").style.display = "none";
+
+  document.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault(); // 폼 제출 방지
+    const id = this.querySelector('input[name="id"]').value;
+    const pw = this.querySelector('input[name="pw"]').value;
+  
+    // 여기에 로그인 검증 코드 (일단은 ID와 PW가 빈 값이 아닌 경우에만 변경됨)
+  
+    if (id && pw) {
+      document.getElementById("login").style.display = "none";
+      document.getElementById("logout").style.display = "block";
+      closePopup(); // 로그인 후 팝업 닫기
+    } else {
+      alert('아이디와 비밀번호를 입력하세요.');
+    }
+  });
+}
 
 function openPopup() {
   var popup = document.getElementById("popup");
@@ -13,31 +31,12 @@ function closePopup() {
   popup.style.opacity = "0";
 }
 
-document.querySelector('form').addEventListener('submit', function (event) {
-  event.preventDefault(); // 폼 제출 방지
-  const id = this.querySelector('input[name="id"]').value;
-  const pw = this.querySelector('input[name="pw"]').value;
 
-  // 여기에 로그인 검증 코드 (일단은 ID와 PW가 빈 값이 아닌 경우에만 변경됨)
-
-  if (id && pw) {
-    document.getElementById("login").style.display = "none";
-    document.getElementById("logout").style.display = "block";
-    closePopup(); // 로그인 후 팝업 닫기
-  } else {
-    alert('아이디와 비밀번호를 입력하세요.');
-  }
-});
 
 //로그아웃
 function logout() {
   document.getElementById("login").style.display = "block";
   document.getElementById("logout").style.display = "none";
-}
-
-// 마이페이지로 이동 
-function goToProfile(){ 
-  window.location.href = 'mypage.html';
 }
 
 /*햄버거 버튼 활성화, 비활성화 */ 

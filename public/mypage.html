@@ -4,67 +4,50 @@
 <head>
     <title>구했소</title>
     <meta charset="UTF-8" name="viewport" content="width = device-width, initial-scale = 1">
-    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/mypage.css">
+    <link rel="stylesheet" href="css/global.css">
 </head>
 
 <body>
     <div class="menu-container"> <!-- 메뉴바 -->
         <a href="home.html"><img src="img/logo.jpg" alt="Logo" class="logo"></a>
-        <div class="search-container">
-            <button class="search-button">
-                <img src="img/search.png" alt="search-img" class="search-img">
-            </button>
-            <input type="text" class="search-input" placeholder="검색어를 입력하세요">
-
-        </div>
-        <div id=login>
-            <button onclick="openPopup()" class="login-button">로그인</button>
-            <a href="signup.html" class="signup-button">회원가입</a>
-        </div>
-        <div id="popup" class="popup-overlay">
-            <div class="popup-content">
-                <span onclick="closePopup()" class="close-btn">&times;</span>
-                <h2>로그인</h2>
-                <form action="login">
-                    <input type="text" name="id" placeholder="아이디">
-                    <input type="password" name="pw" placeholder="비밀번호">
-                    <input type="submit" value="로그인">
-                </form>
-            </div>
-        </div>
         <div id=logout>
-            <button id="logout-button" onclick="logout()">로그아웃</button>
-            <button onclick="goToProfile()">마이페이지</button>
+            <button class="addPost" onclick="addPost()">새 게시글 등록</button>
+            <a href = "mypage.html">마이페이지</a>
         </div>
     </div>
-
-    <div class="profile">
-
+    <div class = "select-menu"> 
+        <button class="manage-post-button" onclick="managePost()">게시글 관리</button>
+        <button class="modify-profile-button" onclick="modifyProfile()">프로필 수정</button>
+        </div> 
+    <div class = "post">
         <h4>게시글 관리</h4>
-        <div class="post">
-            <div class="modify-post">
-                <!--예시 게시글-->
-                <a href=detail.html>
-                    <p>카테고리 | </p>
-                    예시 게시글 제목 1
-                </a>
-                <div>
-                    <button onclick="modifyPost()">수정</button>
-                    <button onclick="deletePost()">삭제</button>
+        <div class = "posts">
+            <div class = "one-post">
+                <div class = post-image></div> 
+                <p> 예시 게시글 제목 </p>
+                <p> 예시 카테고리 </p>
+                <div class = "heart">
+                <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 5.14552C20 2.30845 17.6522 0 14.7671 0C12.6496 0 10.8231 1.24294 9.99983 3.02475C9.17695 1.24294 7.35005 0 5.23358 0C2.3471 0 0 2.30845 0 5.14552C0 5.74399 0.104375 6.31795 0.296965 6.85286C0.515816 7.46192 0.847461 8.01801 1.26799 8.49764C1.44745 8.70287 1.64206 8.89353 1.85249 9.06863L9.83485 16.8635C9.88401 16.9119 9.94798 16.936 10.0126 16.936C10.0773 16.936 10.1423 16.9119 10.1917 16.8635L18.4704 8.77734L18.4697 8.77635C19.0064 8.24773 19.4269 7.60591 19.6906 6.88994C19.8906 6.3451 20 5.75756 20 5.14552Z" fill="#FF6C87"/>
+                    </svg>
+                    <p>1234</p>
+                </div>
+                <div class = "button-container">
+                <button class = "modify-post" onclick = "modifyPost()">수정</button>
+                <button class = "delete-post" onclick = "deletePost()">삭제</button>
                 </div>
             </div>
-            
-            <div >
-                <a href=add.html class="add">새 게시글 등록</a>
-            </div>
         </div>
-        <div class="modify-profile">
+    </div>
+    <div class="profile">
+        
+        <div class="modify-profile deactive">
             <h4>프로필 수정</h4>
             <form action="profileChange" class ="profileChange">
                 <div class = "profile-image">
                 <div id = "image-show"></div>
-                <label for="chooseFile">프로필 사진 변경</label>
+                <label for="chooseFile">프로필 변경</label>
                 <input type="file" id="chooseFile" name="chooseFile"accept="image/*" onchange="loadFile(this)">
             </div>
             <div class = "profile-info">
@@ -73,7 +56,7 @@
                 <p>이메일</p>
                 <input type="text" name="email">
                 <p>경력</p>
-                <textarea name="introduce" cols = "20" rows="5"  placeholder="입력예시:&#10Guhatso 대표(약력1)&#10동시 접속자 수 100만 달성(약력2)&#10IT 대회 수상(약력3)"></textarea>
+                <textarea name="introduce" cols = "20" rows="5"  placeholder="입력예시&#10&#10Guhatso 대표(약력1)&#10동시 접속자 수 100만 달성(약력2)&#10IT 대회 수상(약력3)"></textarea>
 
                 <p>지역</p>
                 <select name="country">
@@ -159,5 +142,6 @@
         </div>
     </div>
     <script src="js/mypage.js"></script>
+    
     <script src="js/global.js"></script>
 </body>
