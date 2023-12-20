@@ -15,7 +15,7 @@ function closePopup() {
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault(); // 폼 제출 방지
     const id = this.querySelector('input[name="id"]').value;
-    const pw = this.querySelector('input[name="pw"]').value;
+    const pw = this.querySelector('input[name="password"]').value;
 
     // 여기에 로그인 검증 코드 (일단은 ID와 PW가 빈 값이 아닌 경우에만 변경됨)
 

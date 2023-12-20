@@ -222,3 +222,22 @@ slide.addEventListener("mouseout", () => {
     nextMove();
   }, 3000);
 });
+
+
+
+
+// 조성우 : 로그인 기능
+const id = document.querySelector("#id");
+const password = document.querySelector("#password");
+const btn_login = document.querySelector("#btn_login");
+
+btn_login.addEventListener("click", login);
+
+function login() {
+  const req = {
+    id: id.value,
+    password: password.value,
+  };
+
+  console.log(req);
+}
