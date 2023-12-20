@@ -40,6 +40,9 @@ function addNewCategory(categoryTitle, categoryList) {
     mainTitle.textContent = categoryTitle;
     categoryContainer.appendChild(mainTitle);
 
+    const select = document.createElement('select');
+    select.classList.add('category-list');
+
     for (let i = 0; i < categoryList.length; i++){
 
         const newCategory = document.createElement('div');
@@ -54,12 +57,29 @@ function addNewCategory(categoryTitle, categoryList) {
         categorySmall.classList.add('category-small');
         newCategory.appendChild(categorySmall);
 
+        const option = document.createElement('option');
+            option.value = categoryList[i][0];
+            option.textContent = categoryList[i][0];
+            option.disabled = true;
+            select.appendChild(option);
+
         for (let j = 1; j < categoryList[i].length; j++) {
             const element = document.createElement('button');
             element.textContent = categoryList[i][j];
             categorySmall.appendChild(element);
+            
+            const option = document.createElement('option');
+            option.value = categoryList[i][j];
+            option.textContent = categoryList[i][j];
+            select.appendChild(option);
         }
 
+            option.value = "blank";
+            option.textContent = "ーーーー";
+            option.disabled = true;
+            select.appendChild(option);
+
+        categoryContainer.appendChild(select);
         categoryContainer.appendChild(newCategory);
     }
 }
@@ -71,7 +91,7 @@ switch (category){
         addNewCategory('청소 / 방역', clean);
         break;
     case 'car-repair' :
-        addNewCategory('자동차 수리', carRepair);
+        addNewCategory('자동차 정비', carRepair);
         break;
     case 'making' :
         addNewCategory('제작의뢰', making);
