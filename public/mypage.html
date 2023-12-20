@@ -17,6 +17,7 @@
     </div>
     <div class="select-menu">
         <button class="manage-post-button" onclick="managePost()">게시글 관리</button>
+        <button class="mobile-add-post-button" onclick="postAdd()">+</button>
         <button class="modify-profile-button" onclick="modifyProfile()">프로필 수정</button>
     </div>
     <div class="add-post deactive">
@@ -67,6 +68,7 @@
         <div class="posts">
             <div class="one-post">
                 <div class="post-image"></div>
+                <div class="post-items">
                 <p class="post-title"> 예시 게시글 제목 </p>
                 <p class="post-category"> 예시 카테고리 </p>
                 <div class="heart">
@@ -76,6 +78,7 @@
                             fill="#FF6C87" />
                     </svg>
                     <p>1234</p>
+                </div>
                 </div>
                 <div class="button-container">
                     <button class="modify-post" onclick="modifyPost()">수정</button>

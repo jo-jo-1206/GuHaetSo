@@ -82,7 +82,9 @@ function postAdd(){
 }
 
 function modifyPost(){
-  window.location.href = "add.html";
+  profile.classList.remove('deactive');
+  post.classList.add('deactive');
+  addPost.classList.add('deactive');
   
   // 수정할 게시글 정보 불러오기 
 }

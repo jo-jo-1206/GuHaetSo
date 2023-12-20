@@ -222,35 +222,77 @@
     .heart p {
         font-size: 10px;
         color: #8a8a8a;
+        margin : 0;
+        padding : 0;
     }
+
+    .mobile-add-post-button{
+        display : none;
+    }
+
+    .post-items{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        width : 50%;
+    }
+    #big-category,
+#small-category {
+    padding: 10px 30px;
+    font-size: 14px;
+    width: auto;
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.postAdded input[type="submit"] {
+    position: absolute;
+    margin-top: 32px;
+    left: 50%;
+    width: auto;
+    padding: 10px 120px;
+}
 }
 
 @media screen and (max-width: 1022px) {
 
+    
     #logout .addPost {
-        color: white;
-        background-color: black;
-        border-radius: 10px;
-        font-weight: bold;
-        font-size: 10px;
-        margin-right: 0px;
+        display : none;
     }
 
     .select-menu {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 35px;
-        margin-left: 60px;
+        border-top : 1px solid #d9d9d9;
+        position : fixed;
+        bottom : 0;
+        z-index: 9998;
+        background-color : white;
+        width : 100%;
+        display : flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom:20px;
+        padding-top : 10px;
     }
 
     .select-menu button {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: bold;
         background-color: #00000000;
         border: none;
-        margin-right: 57px;
         cursor: pointer;
         padding: 0;
+        text-align : center;
+        margin:auto
+    }
+    .select-menu .mobile-add-post-button{
+        border : 2px solid black;
+        color : black;
+        border-radius : 10px;
+        font-weight : normal;
+        font-size : 22px;
+        width: 28px;
     }
 
 
@@ -266,12 +308,6 @@
         padding: 5px 0;
     }
 
-
-    h4 {
-        font-size: 20px;
-        margin: 20px 0;
-    }
-
     .add {
         float: right;
         font-weight: bold;
@@ -280,10 +316,6 @@
         padding: 5px 10px;
         margin-top: 10px;
     }
-
-
-
-
 
     #image-show {
         width: 200px;
@@ -394,13 +426,13 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 32px 0;
+        padding: 12px 0;
         font-size: 16px;
     }
 
     .post-image {
-        width: 150px;
-        height: 118px;
+        width: 90px;
+        height: 71px;
         margin-left: 10px;
         border-radius: 10px;
         border: none;
@@ -409,13 +441,11 @@
 
     .post-title {
         font-size: 15px;
-        margin-left: 10px;
-        width: 100px;
+        margin : 0;
     }
 
     .post-category {
-        font-size: 15px;
-        width: 100px;
+        display : none;
     }
 
     .button-container {
@@ -433,19 +463,53 @@
         cursor: pointer;
     }
 
+    .post-items{
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:flex-start;
+    }
 
     .heart {
-        margin-right: 20px;
+        display : flex;
+        flex-direction : row;
+        justify-content: center;
+        align-items: center;
     }
 
     .heart p {
         font-size: 10px;
         color: #8a8a8a;
+        margin-left : 3px;
     }
 
     h4 {
-        margin-left: 20px;
+        font-size: 16px;
+        margin-top : 0;
     }
+
+    .post,
+    .profile,
+    .add-post{
+        margin : 0 15px;
+    }
+
+    #big-category,
+#small-category {
+    padding: 5px 10px;
+    font-size: 14px;
+    width: auto;
+    margin: 0;
+    margin-top: 14px;
+    margin-bottom: 34px;
+}
+.postAdded input[type="submit"] {
+    position: absolute;
+    margin-top: 64px;
+    left: 50%;
+    width: auto;
+    padding: 10px 120px;
+}
 }
 
 select {
@@ -486,24 +550,18 @@ select {
 }
 
 .postAdded input[name="title"] {
-    font-size: 20px;
+    font-size: 16px;
     border: none;
     margin: 0;
     padding: 0;
 }
 
-.postAdded input[type="submit"] {
-    position: absolute;
-    margin-top: 32px;
-    left: 50%;
-    width: auto;
-    padding: 10px 120px;
-}
+
 
 .postAdded textarea[name="content"] {
     font-family: 'Inter', sans-serif;
 
-    font-size: 20px;
+    font-size: 16px;
     border: none;
     border-radius: 0;
     border-top: 1px solid #d9d9d9;
@@ -532,12 +590,3 @@ select {
     color : white;
 }
 
-#big-category,
-#small-category {
-    padding: 10px 30px;
-    font-size: 14px;
-    width: auto;
-    margin: 0;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
