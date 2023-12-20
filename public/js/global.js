@@ -29,11 +29,18 @@ document.querySelector('form').addEventListener('submit', function (event) {
   }
 });
 
+//로그아웃
 function logout() {
   document.getElementById("login").style.display = "block";
   document.getElementById("logout").style.display = "none";
 }
 
+// 마이페이지로 이동 
+function goToProfile(){ 
+  window.location.href = 'mypage.html';
+}
+
+/*햄버거 버튼 활성화, 비활성화 */ 
 const navbarBurger = document.querySelector('.navbar_burger');
 const navbarburgerback = document.querySelector('.navbar_burger_back');
 const navbarMenu = document.querySelector('.navbar_menu');

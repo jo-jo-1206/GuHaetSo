@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>구했소</title>
+    <meta charset="UTF-8" name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/mypage.css">
+</head>
+
+<body>
+    <div class="menu-container"> <!-- 메뉴바 -->
+        <a href="home.html"><img src="img/logo.jpg" alt="Logo" class="logo"></a>
+        <div class="search-container">
+            <button class="search-button">
+                <img src="img/search.png" alt="search-img" class="search-img">
+            </button>
+            <input type="text" class="search-input" placeholder="검색어를 입력하세요">
+
+        </div>
+        <div id=login>
+            <button onclick="openPopup()" class="login-button">로그인</button>
+            <a href="signup.html" class="signup-button">회원가입</a>
+        </div>
+        <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+                <span onclick="closePopup()" class="close-btn">&times;</span>
+                <h2>로그인</h2>
+                <form action="login">
+                    <input type="text" name="id" placeholder="아이디">
+                    <input type="password" name="pw" placeholder="비밀번호">
+                    <input type="submit" value="로그인">
+                </form>
+            </div>
+        </div>
+        <div id=logout>
+            <button id="logout-button" onclick="logout()">로그아웃</button>
+            <button onclick="goToProfile()">마이페이지</button>
+        </div>
+    </div>
+
+    <div class="profile">
+
+        <h4>게시글 관리</h4>
+        <div class="post">
+            <div class="modify-post">
+                <!--예시 게시글-->
+                <a href=detail.html>
+                    <p>카테고리 | </p>
+                    예시 게시글 제목 1
+                </a>
+                <div>
+                    <button onclick="modifyPost()">수정</button>
+                    <button onclick="deletePost()">삭제</button>
+                </div>
+            </div>
+            
+            <div >
+                <a href=add.html class="add">새 게시글 등록</a>
+            </div>
+        </div>
+        <div class="modify-profile">
+            <h4>프로필 수정</h4>
+            <form action="profileChange" class ="profileChange">
+                <div class = "profile-image">
+                <div id = "image-show"></div>
+                <label for="chooseFile">프로필 사진 변경</label>
+                <input type="file" id="chooseFile" name="chooseFile"accept="image/*" onchange="loadFile(this)">
+            </div>
+            <div class = "profile-info">
+                <p>전화번호</p>
+                <input type="text" name="phone">
+                <p>이메일</p>
+                <input type="text" name="email">
+                <p>경력</p>
+                <textarea name="introduce" cols = "20" rows="5"  placeholder="입력예시:&#10Guhatso 대표(약력1)&#10동시 접속자 수 100만 달성(약력2)&#10IT 대회 수상(약력3)"></textarea>
+
+                <p>지역</p>
+                <select name="country">
+                    <option value="Seoul">서울</option>
+                    <option value="GyeonggiN">경기 북부</option>
+                    <option value="GyeonggiS">경기 남부</option>
+                    <option value="Incheon">인천</option>
+                    <option value="Gangwon">강원</option>
+                    <option vlaue="Busan">부산</option>
+                    <option value="Daegu">대구</option>
+                    <option value="Ulsan">울산</option>
+                    <option value="Daejeon">대전</option>
+                    <option value="Sejong">세종</option>
+                    <option value="Gwangju">광주</option>
+                    <option value="ChungcheongN">충북</option>
+                    <option value="ChungcheongS">충남</option>
+                    <option value="JeollaN">전북</option>
+                    <option value="JeollaS">전남</option>
+                    <option value="GyeongsangN">경북</option>
+                    <option value="GyeongsangS">경남</option>
+                    <option value="Jeju">제주</option>
+                </select>
+                <input type="submit" value="수정하기">
+            </div>
+            </form>
+        </div>
+
+    </div>
+    <!-- 모바일 요소 (햄버거 버튼)-->
+    <div class="navbar_overlay"></div>
+
+    <div class="navbar_burger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+    </div>
+
+    <div class="navbar_menu">
+        <hr>
+        <div class="big-category">
+            <button>카테고리</button>
+            <svg class="svg-category" xmlns="http://www.w3.org/2000/svg" width="24" height="12" viewBox="0 0 24 12">
+                <path d="M2 2 L12 10 L22 2" stroke="black" stroke-width="2" fill="none" />
+            </svg>
+        </div>
+
+        <div class="category-container-mobile">
+            <button class="category-button car-repair">
+                <span class="button-text">・ 자동차 정비</span>
+            </button>
+            <button class="category-button interior">
+                <span class="button-text">・ 인테리어</span>
+            </button>
+            <button class="category-button lesson">
+                <span class="button-text">・ 레슨</span>
+            </button>
+            <button class="category-button making">
+                <span class="button-text">・ 제작의뢰</span>
+            </button>
+            <button class="category-button dog">
+                <span class="button-text">・ 돌보미</span>
+            </button>
+            <button class="category-button clean">
+                <span class="button-text">・ 청소, 방역</span>
+            </button>
+            <button class="category-button sport">
+                <span class="button-text">・ 스포츠 용역</span>
+            </button>
+        </div>
+
+        <a href="home.html">공지사항</a>
+        <a href="home.html">FAQ</a>
+        <a href="home.html">이벤트</a>
+        <div class="navbar_burger_back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
+
+        </div>
+    </div>
+    <script src="js/mypage.js"></script>
+    <script src="js/global.js"></script>
+</body>

@@ -1,0 +1,140 @@
+.post{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding : 0 25px;
+}
+
+.profile{
+    font-size : 16px;
+}
+
+.profile h4{
+    font-size : 18px;
+}
+
+.post p{
+    display : inline;
+    font-weight: bold;
+}
+
+.post button{
+    font-size : 14px;
+    border-radius : 5px;
+    border : 1px solid #d9d9d9;
+    right : 0;
+    background-color : #00000000;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.modify-post{
+    display: flex;
+    justify-content: space-between;
+    align-items : center;
+    padding : 5px 0;
+}
+
+.add{
+    float : right;
+    font-weight: bold;
+    border : 1px solid #999999;
+    border-radius : 5px;
+    padding : 5px 10px;
+    margin-top: 10px;
+}
+
+
+#chooseFile{
+    visibility: hidden;
+}
+
+#image-show{
+    width:300px;
+    height: 231px;
+    background-color: #d9d9d9;
+    border-radius:10px;
+}
+
+#image-show img{
+    width: 300px;
+    height: 231px;
+    border-radius: 10px;
+}
+
+.profile-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-image label{
+    margin: 14px;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius : 5px;
+    border : 1px solid #999999;
+}
+
+.profileChange{
+    display:flex;
+    flex-direction:row;
+    justify-content : space-start;
+    padding: 0 25px;
+}
+
+.profile-info{
+    margin: 0 auto;
+    width : 50%;
+}
+
+form p,
+form input {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 15px 5px; /* 패딩을 좁게 설정 */
+  width: calc(50% - 50px); /* 전체 너비의 절반에서 마진과 패딩을 뺀 값 */
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+
+form p {
+  text-align: left; 
+  padding: 5px 10px;
+  width:30%
+
+}
+
+form input{
+    padding-top:5px;
+    padding-bottom:5px;
+    border-radius : 5px;
+    border : 1px solid #999999;
+    width: 50%;
+}
+
+input[name="introduce"] {
+    height: calc(1.5em + 2px); /* 높이를 조절하여 여러 줄로 보이도록 함 */
+    padding: 5px; /* 내용과 상하 여백 설정 */
+    resize: vertical; /* 사용자가 입력란 크기를 조정할 수 있도록 함 */
+  }
+  
+form textarea{
+    width: 49%;
+    border-radius : 5px;
+    border : 1px solid #999999;
+    margin-bottom: 20px;
+    resize: none;
+}
+
+form select{
+    
+    padding-top:5px;
+    padding-bottom:5px;
+    border-radius : 5px;
+    border : 1px solid #999999;
+    width: 50%;
+}
