@@ -1,6 +1,9 @@
 @media screen and (min-width:1023px){
-.body2{
-    display:none;
+.explain-text-mobile{
+    display: none;
+}
+.review-container-mobile{
+    display: none;
 }
 .detail-container{
     width: 100%;
@@ -13,6 +16,14 @@
     max-width: 1500px;
     margin: auto;
     border:  0px;
+}
+.catalog-button{
+    margin-top: 20px;
+    margin-left: 57px;
+    width: 80px;
+    height: 40px;
+    border: #bab9b9e9 solid 2px;
+    background-color: #bab9b9e9; 
 }
 
 .explain-container{
@@ -47,7 +58,7 @@
 
 .person-container{
     width: 100%;
-    height: 600px;
+    height: 900px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -75,8 +86,8 @@
 }
 
 .review-container{
-    margin-top:50px;
     text-align: center;
+    margin-top: 10px;
     border : 0px;
     width: 100%;
     border: solid 2px #000000;
@@ -217,10 +228,162 @@
 } 
 }
 @media screen and (max-width:1022px){
-.body1{
-    display: none;
-}
-.moblie-menu{
-    color: #7fb5ff;
-}
-}
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 315px;
+        overflow: hidden;
+        margin-top: 40px;
+        display:flex;
+        user-select:none;
+        flex-wrap: nowrap;
+        max-width: 800px;
+        max-height: 350px;
+        border: 0px;
+        border-radius: 10px;
+    }
+    .banner-item{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    
+        position:relative;
+        left: 0px;
+    
+        width:100%;
+        height:100%;
+        flex-shrink: 0;
+        transition: left 0.15s;
+    }
+    
+    .banner-button{
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        position: absolute;
+        top: calc(50% - 20px);
+        color: white;
+        width: 34px;
+        height: 34px;
+        border-radius: 100%;
+        background-color: #cccc;
+        cursor: pointer;
+    }
+    
+    .banner-prev-button{
+        left: 11px;
+    }
+    
+    .banner-next-button{
+        right: 11px;
+    }
+    
+    .banner-item.item1{
+        background-color: gray;
+    }
+    
+    .banner-item.item2{
+        background-color: gray;
+    }
+    
+    .banner-item.item3{
+        background-color: gray;
+    }
+    
+    .banner-item.item4{
+        background-color: gray;
+    }
+    
+    .banner-item.item5{
+        background-color: gray;
+    }
+    
+    
+    .banner-pagination{
+        display: flex;
+        gap: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .banner-pagination > li{
+        color: #7fb5ff88;
+        cursor: pointer;
+        font-size: 25px;
+    }
+    
+    .banner-pagination > li.active{
+        color: #7fb5ff;
+    }
+    
+    .banner-item-duplicate{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: 0px;
+        width: 100%;
+        height: 300px;
+        flex-shrink: 0;
+        transition: left 0.15s;
+    }
+    .person-img{
+        background-color: gray;
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-left: 23px;
+    }
+    .explain-text{
+        display: none;
+    }
+    .like-profile{
+        display:flex;
+        flex-direction: row;
+    }
+    .review-container-mobile{
+        text-align: center;
+        width: 100px;
+        margin: auto;
+        margin-top: 80px;
+        border: 0px;
+        border-radius: 10px;
+    }
+    
+    .review-container-mobile button{
+        background-color: white;
+        border: 0px;
+        font-size: 15pt;
+        width: 100%;
+        height: 50px;
+    
+    }
+    .history1{
+        display: none;
+    }
+    .review-container{
+        display: none;
+    }
+    .person-content content{
+        margin-left: 100px;
+    }
+    h3, h4, h5{
+        margin-left: 25px;
+    }
+    .explain-text-mobile{
+        margin-left: 25px;
+    }
+    .catalog-button{
+        margin-top: 20px;
+        width: 100%;
+        height: 40px;
+        border: #bab9b9e9 solid 2px;
+        background-color: #bab9b9e9; 
+    }
+} 
