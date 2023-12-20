@@ -248,6 +248,14 @@ function login() {
   })
   .then((res) => res.json())
   .then((res) => {
-    
+    if (res.success) {
+      // 로그인 성공
+    } else {
+      // 로그인 실패
+      alert(res.msg);
+    }
+  })
+  .catch((err) => {
+    console.error(new Error("로그인 중 에러 발생", err));
   });
 }
