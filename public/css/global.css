@@ -69,6 +69,7 @@
   }
 
   .popup-content {
+    max-width: 368px;
     width: 80%;
     padding: 20px;
     background-color: #fff;
