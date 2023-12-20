@@ -5,9 +5,9 @@ const express = require('express');
 const app = express();
 
 // 라우팅
-const home = require("./routes/home/home");
+const home = require("./src/routes/home/home");
 
-app.set("views", "./views");
+app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
 app.use("/", home);
