@@ -231,7 +231,10 @@ const id = document.querySelector("#id");
 const password = document.querySelector("#password");
 const btn_login = document.querySelector("#btn_login");
 
-btn_login.addEventListener("click", login);
+btn_login.addEventListener("click", function(event) {
+  event.preventDefault();
+  login();
+});
 
 function login() {
   const req = {

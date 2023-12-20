@@ -5,6 +5,9 @@ class UserStorage {
         id: ["zzz11411"],
         password: ["harrycho0998"],
         name: ["조성우"],
+        category: ["car-repair"],
+        phoneNumber: ["01056794775"],
+        email: ["zzz11411@naver.com"],
     };
 
     static getUsers(...fields) {
@@ -29,6 +32,18 @@ class UserStorage {
         }, {});
 
         return userInfo;
+    }
+
+    static save(userInfo) {
+        const users = this.#users;
+        users.name.push(userInfo.name);
+        users.category.push(userInfo.category);
+        users.phoneNumber.push(userInfo.phoneNumber);
+        users.email.push(userInfo.email);
+        users.id.push(userInfo.id);
+        users.name.push(userInfo.name);
+        users.password.push(userInfo.password);
+        return { success: true };
     }
 }
 
