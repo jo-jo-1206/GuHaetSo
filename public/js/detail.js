@@ -1,8 +1,13 @@
 const reviewscore = document.getElementById("number");
+const reviewscorem = document.getElementById("numberm");
 const reviewStar = document.querySelector(".review-button");
+const reviewStarm = document.querySelector(".review-button-mobile");
 let number = reviewscore.innerText;
+let numberm = reviewscorem.innerText;
 let chk = false;
+let chkm = false;
 console.log(reviewStar.innerText);
+console.log(reviewStarm.innerText);
 
 function review(){
   if(chk) {
@@ -15,7 +20,17 @@ function review(){
   }
   chk = !chk;
 }
-
+function reviewm(){
+  if(chkm) {
+    numberm = (parseInt(numberm) - 1);
+    reviewStarm.innerHTML = `<span id="numberm">좋아요 ${numberm}</span>건 🤍`;
+  }
+  else {
+    numberm = parseInt(numberm) + 1;
+    reviewStarm.innerHTML = `<span id="numbemr">좋아요 ${numberm}</span>건 ❤️`;
+  }
+  chkm = !chkm;
+}
 
 
 // 슬라이크 전체 크기(width 구하기)
