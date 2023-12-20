@@ -1,471 +1,543 @@
-@media screen and (min-width: 1023px){
-.logo {
-    width: auto;
-    height: 62px;
-  }
-
-  .menu-container {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    max-width: 988px;
-    left: 0;
-    right: 0;
-    background-color: white;
-    padding-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 9998
-  }
-
-#logout .addPost{
-    color: white;
-    background-color: black;
-    padding : 10px 20px;
-    border-radius : 10px;
-    font-weight : bold;
-    margin-right: 0px;
-}
-
-.select-menu {
-    margin-bottom : 35px;
-}
-
-.select-menu button{
-    font-size : 20px;
-    font-weight: bold;
-    background-color : #00000000;
-    border : none;
-    margin-right : 57px;
-    cursor : pointer;
-    padding : 0;
-}
-
-
-.profile{
-    font-size : 16px;
-}
-
-
-.modify-post{
-    display: flex;
-    justify-content: space-between;
-    align-items : center;
-    padding : 5px 0;
-}
-
-.modify-profile.deactive{
-    display: none;
-}
-h4{
-    font-size : 20px;
-    margin: 20px 0;
-}
-
-.add{
-    float : right;
-    font-weight: bold;
-    border : 1px solid #999999;
-    border-radius : 5px;
-    padding : 5px 10px;
-    margin-top: 10px;
-}
-
-
-#chooseFile{
-    visibility: hidden;
-}
-
-#image-show{
-    width:280px;
-    height: 227px;
-    background-color: #d9d9d9;
-    border-radius:10px;
-    margin-top: 30px;
-}
-
-#image-show img{
-    width: 280px;
-    height: 227px;
-    border-radius: 10px;
-}
-
-.profile-image{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.profile-image label{
-    background-color: white;
-    border-radius : 5px;
-    border : 1px solid #999999;
-    margin-top : 28px;
-    padding: 10px 30px;
-    font-size : 14px;
-    cursor : pointer;
-}
-
-.profileChange{
-    display:flex;
-    flex-direction:row;
-    justify-content : space-between;
-}
-
-.profile-info{
-    
-    width : 50%;
-}
-
-form p,
-form input {
-  vertical-align: top;
-  margin: 0;
-  width: calc(50% - 50px); /* 전체 너비의 절반에서 마진과 패딩을 뺀 값 */
-  box-sizing: border-box;
-  margin-bottom: 20px;
-}
-
-
-form p {
-  text-align: left; 
-  width:30%;
-  font-weight : bold;
-
-margin-bottom : 12px;
-}
-
-form input{
-    margin-bottom: 38px;
-    border-radius : 5px;
-    border : 1px solid #999999;
-    width: 100%;
-    height: 38px;
-}
-
-input[name="introduce"] {
-    height: calc(1.5em + 2px); /* 높이를 조절하여 여러 줄로 보이도록 함 */
-    padding: 5px; /* 내용과 상하 여백 설정 */
-    resize: vertical; /* 사용자가 입력란 크기를 조정할 수 있도록 함 */
-  }
-  
-form textarea{
-    width: 100%;
-    border-radius : 5px;
-    border : 1px solid #999999;
-    margin-bottom: 38px;
-    resize: none;
-}
-
-
-form select{
-    
-    padding-top:5px;
-    padding-bottom:5px;
-    border-radius : 5px;
-    border : 1px solid #999999;
-    width: 100%;
-    height : 38px;
-}
-
-input[type="submit"]{
-    transform: translateX(-50%);
-    background-color:#d9d9d9;
-    color: white;
-    border : none;
-}
-
-select{
-    margin-bottom: 84px;
-}
-
-input[type="submit"].active{
-    background-color: black;
-    cursor: pointer;
-}
-
-.post.deactive{
-    display : none;
-}
-
-.one-post{
-    border-top : 1px solid #d9d9d9;
-    border-bottom : 1px solid #d9d9d9;
-    display : flex;
-    flex-direction : row;
-    justify-content : space-between;
-    align-items : center;
-    padding : 32px 0;
-    font-size : 16px;
-}
-
-.post-image{
-    width: 179px;
-    height : 118px;
-    border-radius : 10px;
-    border : none;
-    background-color : #d9d9d9;
-}
-
-.button-container{
-    display : flex;
-    flex-direction : row;
-}
-
-.button-container button{
-    border-radius : 10px;
-    border : 1px solid #d9d9d9;
-    padding : 5px 10px;
-    background-color : white;
-    margin-right : 3px;
-    cursor: pointer;
-}
-
-.heart{
-    display : flex;
-    flex-direction : column;
-    justify-content : center;
-    align-items : center;
-}
-
-.heart p{
-    font-size : 10px;
-    color : #8a8a8a;
-}
-}
-@media screen and (max-width: 1022px){
-
-    #logout .addPost{
-        color: white;
-        background-color: black;
-        border-radius : 10px;
-        font-weight : bold;
-        font-size: 10px;
-        margin-right: 0px;
+@media screen and (min-width: 1023px) {
+    .logo {
+        width: auto;
+        height: 62px;
     }
-    .select-menu {
-        display: flex;
-        justify-content: center;
-        margin-bottom : 35px;
-        margin-left: 60px;
-    }
-    
-    .select-menu button{
-        font-size : 20px;
-        font-weight: bold;
-        background-color : #00000000;
-        border : none;
-        margin-right : 57px;
-        cursor : pointer;
-        padding : 0;
-    }
-    
-    
-    .profile{
-        font-size : 10px;
-    }
-    
-    
-    .modify-post{
+
+    .menu-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        max-width: 988px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding-top: 10px;
         display: flex;
         justify-content: space-between;
-        align-items : center;
-        padding : 5px 0;
+        align-items: center;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 9998
     }
-    
-    .modify-profile.deactive{
-        display: none;
+
+    #logout .addPost {
+        color: white;
+        background-color: black;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        margin-right: 0px;
     }
-    h4{
-        font-size : 20px;
+
+    .select-menu {
+        margin-bottom: 35px;
+    }
+
+    .select-menu button {
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #00000000;
+        border: none;
+        margin-right: 57px;
+        cursor: pointer;
+        padding: 0;
+    }
+
+
+    .profile {
+        font-size: 16px;
+    }
+
+
+    .modify-post {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+    }
+
+
+    h4 {
+        font-size: 20px;
         margin: 20px 0;
     }
-    
-    .add{
-        float : right;
+
+    .add {
+        float: right;
         font-weight: bold;
-        border : 1px solid #999999;
-        border-radius : 5px;
-        padding : 5px 10px;
+        border: 1px solid #999999;
+        border-radius: 5px;
+        padding: 5px 10px;
         margin-top: 10px;
     }
-    
-    
-    #chooseFile{
-        visibility: hidden;
-    }
-    
-    #image-show{
-        width:200px;
-        height: 200px;
+
+
+
+
+    #image-show {
+        width: 280px;
+        height: 227px;
         background-color: #d9d9d9;
-        border-radius:10px;
-        margin-top: 35px;
+        border-radius: 10px;
+        margin-top: 30px;
     }
-    
-    #image-show img{
+
+    #image-show img {
         width: 280px;
         height: 227px;
         border-radius: 10px;
     }
-    
-    .profile-image{
+
+    .profile-image {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
     }
-    
-    .profile-image label{
-        background-color: white;
-        border-radius : 5px;
-        border : 1px solid #999999;
-        margin-top : 28px;
-        padding: 10px 30px;
-        font-size : 14px;
-        cursor : pointer;
+
+
+
+    .profileChange {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
-    
-    .profileChange{
-        display:flex;
-        flex-direction:row;
-        justify-content : space-between;
+
+    .profile-info {
+
+        width: 50%;
     }
-    
-    .profile-info{
-        
-        width : 50%;
-    }
-    
+
     form p,
     form input {
-      vertical-align: top;
-      margin: 0;
-      width: calc(50% - 50px); /* 전체 너비의 절반에서 마진과 패딩을 뺀 값 */
-      box-sizing: border-box;
-      margin-bottom: 20px;
+        vertical-align: top;
+        margin: 0;
+        width: calc(50% - 50px);
+        /* 전체 너비의 절반에서 마진과 패딩을 뺀 값 */
+        box-sizing: border-box;
+        margin-bottom: 20px;
     }
-    
-    
+
+
     form p {
-      text-align: left; 
-      width:30%;
-      font-weight : bold;
-      font-size: 15px;
+        text-align: left;
+        width: 30%;
+        font-weight: bold;
+
+        margin-bottom: 12px;
     }
-    
-    form input{
+
+    form input {
         margin-bottom: 38px;
-        border-radius : 5px;
-        border : 1px solid #999999;
+        border-radius: 5px;
+        border: 1px solid #999999;
         width: 100%;
         height: 38px;
     }
-    
+
     input[name="introduce"] {
-        height: calc(1.5em + 2px); /* 높이를 조절하여 여러 줄로 보이도록 함 */
-        padding: 5px; /* 내용과 상하 여백 설정 */
-        resize: vertical; /* 사용자가 입력란 크기를 조정할 수 있도록 함 */
-      }
-      
-    form textarea{
+        height: calc(1.5em + 2px);
+        /* 높이를 조절하여 여러 줄로 보이도록 함 */
+        padding: 5px;
+        /* 내용과 상하 여백 설정 */
+        resize: vertical;
+        /* 사용자가 입력란 크기를 조정할 수 있도록 함 */
+    }
+
+    form textarea {
         width: 100%;
-        border-radius : 5px;
-        border : 1px solid #999999;
+        border-radius: 5px;
+        border: 1px solid #999999;
         margin-bottom: 38px;
         resize: none;
     }
-    
-    
-    form select{
-        
-        padding-top:5px;
-        padding-bottom:5px;
-        border-radius : 5px;
-        border : 1px solid #999999;
+
+
+    form select {
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        border: 1px solid #999999;
         width: 100%;
-        height : 38px;
+        height: 38px;
     }
-    
-    input[type="submit"]{
+
+    input[type="submit"] {
         transform: translateX(-50%);
-        background-color:#d9d9d9;
+        background-color: #d9d9d9;
         color: white;
-        border : none;
+        border: none;
     }
-    
-    select{
-        margin-bottom: 84px;
-    }
-    
-    input[type="submit"].active{
+
+    input[type="submit"].active {
         background-color: black;
         cursor: pointer;
     }
-    
-    .post.deactive{
-        display : none;
+
+
+
+    .one-post {
+        border-top: 1px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px 0;
+        font-size: 16px;
     }
-    
-    .one-post{
-        border-top : 1px solid #d9d9d9;
-        border-bottom : 1px solid #d9d9d9;
-        display : flex;
-        flex-wrap: wrap;
-        flex-direction : row;
-        justify-content : space-between;
-        align-items : center;
-        padding : 32px 0;
-        font-size : 16px;
+
+    .post-image {
+        width: 179px;
+        height: 118px;
+        border-radius: 10px;
+        border: none;
+        background-color: #d9d9d9;
     }
-    
-    .post-image{
-        width: 150px;
-        height : 118px;
-        margin-left: 10px;
-        border-radius : 10px;
-        border : none;
-        background-color : #d9d9d9;
+
+    .button-container {
+        display: flex;
+        flex-direction: row;
     }
-    .post-title{
-        font-size: 15px;
-        margin-left: 10px;
-        width: 100px;
-    }
-    .post-category{
-        font-size: 15px;
-        width: 100px;
-    }
-    .button-container{
-        display : flex;
-        flex-direction : row;
-        margin-left: 33px;
-    }
-    
-    .button-container button{
-        border-radius : 10px;
-        border : 1px solid #d9d9d9;
-        padding : 5px 10px;
-        background-color : white;
-        margin-right : 3px;
+
+    .button-container button {
+        border-radius: 10px;
+        border: 1px solid #d9d9d9;
+        padding: 5px 10px;
+        background-color: white;
+        margin-right: 3px;
         cursor: pointer;
     }
-    
 
-    .heart{
-    margin-right: 20px;
+    .heart {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    
-    .heart p{
-        font-size : 10px;
-        color : #8a8a8a;
+
+    .heart p {
+        font-size: 10px;
+        color: #8a8a8a;
     }
-    h4{
+}
+
+@media screen and (max-width: 1022px) {
+
+    #logout .addPost {
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 10px;
+        margin-right: 0px;
+    }
+
+    .select-menu {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 35px;
+        margin-left: 60px;
+    }
+
+    .select-menu button {
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #00000000;
+        border: none;
+        margin-right: 57px;
+        cursor: pointer;
+        padding: 0;
+    }
+
+
+    .profile {
+        font-size: 10px;
+    }
+
+
+    .modify-post {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+    }
+
+
+    h4 {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .add {
+        float: right;
+        font-weight: bold;
+        border: 1px solid #999999;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-top: 10px;
+    }
+
+
+
+
+
+    #image-show {
+        width: 200px;
+        height: 200px;
+        background-color: #d9d9d9;
+        border-radius: 10px;
+        margin-top: 35px;
+    }
+
+    #image-show img {
+        width: 280px;
+        height: 227px;
+        border-radius: 10px;
+    }
+
+    .profile-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+
+    .profileChange {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .profile-info {
+
+        width: 50%;
+    }
+
+    form p,
+    form input {
+        vertical-align: top;
+        margin: 0;
+        width: calc(50% - 50px);
+        /* 전체 너비의 절반에서 마진과 패딩을 뺀 값 */
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+
+    form p {
+        text-align: left;
+        width: 30%;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    form input {
+        margin-bottom: 38px;
+        border-radius: 5px;
+        border: 1px solid #999999;
+        width: 100%;
+        height: 38px;
+    }
+
+    input[name="introduce"] {
+        height: calc(1.5em + 2px);
+        /* 높이를 조절하여 여러 줄로 보이도록 함 */
+        padding: 5px;
+        /* 내용과 상하 여백 설정 */
+        resize: vertical;
+        /* 사용자가 입력란 크기를 조정할 수 있도록 함 */
+    }
+
+    form textarea {
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #999999;
+        margin-bottom: 38px;
+        resize: none;
+    }
+
+
+    form select {
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        border: 1px solid #999999;
+        width: 100%;
+        height: 38px;
+    }
+
+    input[type="submit"] {
+        transform: translateX(-50%);
+        background-color: #d9d9d9;
+        color: white;
+        border: none;
+    }
+
+
+
+    input[type="submit"].active {
+        background-color: black;
+        cursor: pointer;
+    }
+
+    .one-post {
+        border-top: 1px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px 0;
+        font-size: 16px;
+    }
+
+    .post-image {
+        width: 150px;
+        height: 118px;
+        margin-left: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: #d9d9d9;
+    }
+
+    .post-title {
+        font-size: 15px;
+        margin-left: 10px;
+        width: 100px;
+    }
+
+    .post-category {
+        font-size: 15px;
+        width: 100px;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        margin-left: 33px;
+    }
+
+    .button-container button {
+        border-radius: 10px;
+        border: 1px solid #d9d9d9;
+        padding: 5px 10px;
+        background-color: white;
+        margin-right: 3px;
+        cursor: pointer;
+    }
+
+
+    .heart {
+        margin-right: 20px;
+    }
+
+    .heart p {
+        font-size: 10px;
+        color: #8a8a8a;
+    }
+
+    h4 {
         margin-left: 20px;
     }
+}
+
+select {
+    margin-bottom: 84px;
+}
+
+.profile-image label {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #999999;
+    margin-top: 28px;
+    padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#inputfile,
+#chooseFile {
+    visibility: hidden;
+}
+
+
+
+.post.deactive.deactive,
+.add-post.deactive,
+.modify-profile.deactive {
+    display: none;
+}
+
+.fileUploaded p {
+    display: inline;
+    font-size: 12px;
+}
+
+.fileUploaded {
+    margin-top: 14px;
+    margin-bottom: 24px;
+}
+
+.postAdded input[name="title"] {
+    font-size: 20px;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.postAdded input[type="submit"] {
+    position: absolute;
+    margin-top: 32px;
+    left: 50%;
+    width: auto;
+    padding: 10px 120px;
+}
+
+.postAdded textarea[name="content"] {
+    font-family: 'Inter', sans-serif;
+
+    font-size: 20px;
+    border: none;
+    border-radius: 0;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+
+    margin: 0;
+    padding: 0;
+    padding-top: 38px;
+}
+
+.postAdded input:focus,
+.postAdded textarea:focus {
+    outline: none;
+}
+
+.postAdded label {
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    color: #d9d9d9;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+
+#fileLabel.active{
+    background-color : black;
+    color : white;
+}
+
+#big-category,
+#small-category {
+    padding: 10px 30px;
+    font-size: 14px;
+    width: auto;
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
