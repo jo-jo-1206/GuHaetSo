@@ -250,6 +250,7 @@ function login() {
   .then((res) => {
     if (res.success) {
       // 로그인 성공
+      location.href = "/";
     } else {
       // 로그인 실패
       alert(res.msg);

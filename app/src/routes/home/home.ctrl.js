@@ -1,9 +1,6 @@
 "use_strict";
 
-const users = {
-    id: ["zzz11411"],
-    password: ["harrycho0998"],
-}
+const User = require("../../models/User");
 
 const output = {
     home: (req, res) => {
@@ -19,23 +16,9 @@ const output = {
 
 const process = {
     login: (req, res) => {
-        const id = req.body.id;
-        const password = req.body.password;
-        console.log(id, password);
-
-        if (users.id.includes(id)) {
-            const idx = users.id.indexOf(id);
-            if (users.password[idx] === password) {
-                return res.json({
-                    success: true,
-                });
-            }
-        }
-
-        return res.json({
-            success: false,
-            msg: "로그인 실패",
-        })
+        const user = new User(req.body)
+        const response = user.login();
+        return res.json(response);
     },
 };
 
