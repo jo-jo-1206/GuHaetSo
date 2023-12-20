@@ -12,9 +12,8 @@
         margin-bottom: 55px;
         cursor: pointer;
     }
-    
 .content > img{
-    width: 100%;
+    width: 200px;
     height: 114px;
     border-radius : 10px;
     background-color : #d9d9d9;
@@ -72,6 +71,12 @@
         padding:0;
     }
     .content{
+        max-width: 178px;
+        max-height: 151px;
+        margin-bottom: 35px;
+        cursor: pointer;
+    }
+    .content-img{
         max-width: 178px;
         max-height: 151px;
         margin-bottom: 35px;
@@ -155,11 +160,11 @@
 }
 
 .banner-item.item1{
-    background-color: darkgoldenrod;
+    background-color: white;
 }
 
 .banner-item.item2{
-    background-color: aqua;
+    background-color: white;
 }
 
 .banner-item.item3{
