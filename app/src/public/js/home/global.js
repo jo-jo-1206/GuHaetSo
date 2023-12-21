@@ -1,4 +1,5 @@
 document.getElementById("logout").style.display = "none";
+checkLoginStatus();
 
 function openPopup() {
     var popup = document.getElementById("popup");
@@ -12,17 +13,31 @@ function closePopup() {
     popup.style.opacity = "0";
 }
 
-
-
 // 조성우 : 로그인 기능
 const id = document.querySelector("#id");
 const password = document.querySelector("#password");
 const btn_login = document.querySelector("#btn_login");
+const btn_logout = document.querySelector("#logout-button");
 
 btn_login.addEventListener("click", function(event) {
   event.preventDefault();
   login();
 });
+
+btn_logout.addEventListener("click", function() {
+  logout();
+});
+
+function checkLoginStatus() {
+  const userName = sessionStorage.getItem('user_name');
+  if (userName) {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("logout").style.display = "block";
+  } else {
+    document.getElementById("login").style.display = "block";
+    document.getElementById("logout").style.display = "none";
+  }
+}
 
 function login() {
   const req = {
@@ -30,7 +45,7 @@ function login() {
     user_password: password.value,
   };
 
-  console.log(req);
+  // console.log(req);
   fetch("/login", {
     method: "POST",
     headers: {
@@ -43,8 +58,8 @@ function login() {
   .then((res) => {
     if (res.success) {
       // 로그인 성공
-      document.getElementById("login").style.display = "none";
-      document.getElementById("logout").style.display = "block";
+      sessionStorage.setItem("user_name", res.user_name);
+      checkLoginStatus();
       closePopup(); // 로그인 후 팝업 닫기
     } else {
       // 로그인 실패
@@ -54,6 +69,11 @@ function login() {
   .catch((err) => {
     console.error(new Error("로그인 중 에러 발생", err));
   });
+}
+
+function logout(){
+  sessionStorage.removeItem("user_name");
+  checkLoginStatus();
 }
 /*
 document.querySelector('form').addEventListener('submit', function(event) {
@@ -72,8 +92,3 @@ document.querySelector('form').addEventListener('submit', function(event) {
     }
   });
 */
-
-function logout(){
-    document.getElementById("login").style.display = "block";
-    document.getElementById("logout").style.display = "none";
-  }
