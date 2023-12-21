@@ -3,7 +3,7 @@ const listContainer = document.querySelector('.list');
 
 // 페이지 로드 시 이미 생성된 카드 삭제
 window.addEventListener('load', function() {
-    removeListChild();
+    //removeListChild();
     
 document.getElementById("submenu").style.display = "none";
 });
@@ -53,7 +53,7 @@ const categoryContainer = document.querySelector('.category-list');
 //category-list의 항목을 바꾸는 함수 
 function addNewCategory(categoryTitle, categoryList) {
 
-    removeListChild();
+    //removeListChild();
 
     categoryContainer.innerHTML = '';
 
