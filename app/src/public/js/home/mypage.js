@@ -108,12 +108,18 @@ function modifyPost(){
 }
 
 function deletePost(){
-  //게시글 삭제 
-  if(confirm("정말로 삭제하시겠습니까?")){
-		alert("삭제되었습니다.");
-    
-  const postToDelete = event.target.closest('.one-post');
-  postToDelete.remove();
-	}
-  
+    //게시글 삭제 
+    if(confirm("정말로 삭제하시겠습니까?")){
+      alert("삭제되었습니다.");
+      
+    const postToDelete = event.target.closest('.one-post');
+    postToDelete.remove();
+    }
 }
+
+
+
+// 조성우
+window.onload = function() {
+    
+};

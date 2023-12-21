@@ -1,5 +1,4 @@
 document.getElementById("logout").style.display = "none";
-checkLoginStatus();
 
 function openPopup() {
     var popup = document.getElementById("popup");
@@ -18,6 +17,8 @@ const id = document.querySelector("#id");
 const password = document.querySelector("#password");
 const btn_login = document.querySelector("#btn_login");
 const btn_logout = document.querySelector("#logout-button");
+
+checkLoginStatus();
 
 btn_login.addEventListener("click", function(event) {
   event.preventDefault();
@@ -53,7 +54,6 @@ function login() {
     },
     body: JSON.stringify(req),
   })
-
   .then((res) => res.json())
   .then((res) => {
     if (res.success) {
