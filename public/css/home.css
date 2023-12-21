@@ -5,7 +5,7 @@
 
     .top10 {
         padding: 10px;
-        padding-top: 48px;
+        padding-top: 35px;
     }
 
     .content {
@@ -37,7 +37,29 @@
         padding: 0;
         margin-top : 9px;
     }
-
+    .banner{
+        padding-top: 30px;
+    }
+    .banner1{
+        border: 0px;
+        border-radius: 10px;
+    }
+    .banner2{
+        border: 0px;
+        border-radius: 10px;
+    }
+    .banner3{
+        border: 0px;
+        border-radius: 10px;
+    }
+    .banner4{
+        border: 0px;
+        border-radius: 10px;
+    }
+    .banner5{
+        border: 0px;
+        border-radius: 10px;
+    }
 }
 
 @media screen and (min-width: 1023px) {
@@ -122,7 +144,7 @@
     margin-bottom: 5px;
 
 }
-
+    
 .banner {
     position: relative;
     width: 100%;
@@ -181,15 +203,15 @@
 }
 
 .banner-item.item3 {
-    background-color: darkcyan;
+    background-color: white;
 }
 
 .banner-item.item4 {
-    background-color: darkmagenta;
+    background-color: white;
 }
 
 .banner-item.item5 {
-    background-color: darkslateblue;
+    background-color: white;
 }
 
 ul,
