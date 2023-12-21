@@ -46,9 +46,9 @@
             <li> <button class="menu making">제작 의뢰</button></li>
             <li> <button class="menu lesson">취미 레슨</button> </li>
             <li><button class="menu interior">인테리어</button> </li>
-            <li> <button class="menu pet">돌보미</button> </li>
-            <li><button class="menu cleaning">청소 / 방역</button> </li>
-            <li><button class="menu sports">스포츠 용역</button> </li>
+            <li> <button class="menu dog">돌보미</button> </li>
+            <li><button class="menu clean">청소 / 방역</button> </li>
+            <li><button class="menu sport">스포츠 용역</button> </li>
         </ul>
     </div>
     <div id="submenu">
@@ -69,22 +69,22 @@
                 <ul>
                     <li> 부품교체
                         <ul>
-                            <li><button class="car tire">타이어</button></li>
-                            <li><button class="car oil">오일</button></li>
-                            <li><button class="car filter">필터</button></li>
-                            <li><button class="car break">브레이크 패드</button></li>
+                            <li><button class="car-repair tire">타이어</button></li>
+                            <li><button class="car-repair oil">오일</button></li>
+                            <li><button class="car-repair filter">필터</button></li>
+                            <li><button class="car-repair break">브레이크 패드</button></li>
                         </ul>
                     </li>
                     <li> 자동차 검사
                         <ul>
-                            <li><button class="car full-test">전체검사</button></li>
-                            <li><button class="car test">전체검사</button></li>
+                            <li><button class="car-repair full-test">전체검사</button></li>
+                            <li><button class="car-repair test">전체검사</button></li>
                         </ul>
                     </li>
                     <li> 세차 및 도색
                         <ul>
-                            <li><button class="car wash">세차</button></li>
-                            <li><button class="car paint">도색</button></li>
+                            <li><button class="car-repair wash">세차</button></li>
+                            <li><button class="car-repair paint">도색</button></li>
                         </ul>
                     </li>
                 </ul>
@@ -154,16 +154,16 @@
                 <ul>
                     <li> 펫시터
                         <ul>
-                            <li><button class="pet cat">탁묘, 탁견</button></li>
-                            <li><button class="pet visit">방문 돌봄</button></li>
-                            <li><button class="pet walk">산책</button></li>
-                            <li><button class="pet train">훈련</button></li>
+                            <li><button class="dog cat">탁묘, 탁견</button></li>
+                            <li><button class="dog visit">방문 돌봄</button></li>
+                            <li><button class="dog walk">산책</button></li>
+                            <li><button class="dog train">훈련</button></li>
                         </ul>
                     </li>
                     <li> 미용
                         <ul>
-                            <li><button class="pet visit-cut">방문 미용</button></li>
-                            <li><button class="pet cut">미용실</button></li>
+                            <li><button class="dog visit-cut">방문 미용</button></li>
+                            <li><button class="dog cut">미용실</button></li>
                         </ul>
                     </li>
                 </ul>
@@ -172,17 +172,17 @@
                 <ul>
                     <li> 방문청소
                         <ul>
-                            <li><button class="cleaning aircon">에어컨 청소</button></li>
-                            <li><button class="cleaning house">입주 청소</button></li>
-                            <li><button class="cleaning general">일반 청소</button></li>
-                            <li><button class="cleaning sewer">하수구 청소</button></li>
+                            <li><button class="clean aircon">에어컨 청소</button></li>
+                            <li><button class="clean house">입주 청소</button></li>
+                            <li><button class="clean general">일반 청소</button></li>
+                            <li><button class="clean sewer">하수구 청소</button></li>
                         </ul>
                     </li>
                     <li> 방역
                         <ul>
-                            <li><button class="cleaning cockroach">바퀴벌레</button></li>
-                            <li><button class="cleaning ant">개미</button></li>
-                            <li><button class="cleaning bug">그 외</button></li>
+                            <li><button class="clean cockroach">바퀴벌레</button></li>
+                            <li><button class="clean ant">개미</button></li>
+                            <li><button class="clean bug">그 외</button></li>
                         </ul>
                     </li>
                 </ul>
@@ -191,12 +191,12 @@
                 <ul>
                     <li> 스포츠 용역
                         <ul>
-                            <li><button class="sports soccer">축구</button></li>
-                            <li><button class="sports basketball">농구</button></li>
-                            <li><button class="sports baseball">야구</button></li>
-                            <li><button class="sports volleyball">배구</button></li>
-                            <li><button class="sports badminton">배드민턴</button></li>
-                            <li><button class="sports etc">기타</button></li>
+                            <li><button class="sport soccer">축구</button></li>
+                            <li><button class="sport basketball">농구</button></li>
+                            <li><button class="sport baseball">야구</button></li>
+                            <li><button class="sport volleyball">배구</button></li>
+                            <li><button class="sport badminton">배드민턴</button></li>
+                            <li><button class="sport     etc">기타</button></li>
                         </ul>
                     </li>
                 </ul>
@@ -211,8 +211,18 @@
                 <div class="banner-item item3"><img src="img/psy.jpg" alt="psy" class="psy3" width=100% height=100%></div>
                 <div class="banner-item item4"><img src="img/psy4.jpg" alt="psy" class="psy3" width=100% height=100%></div>
                 <div class="banner-item item5"><img src="img/psy5.jpg" alt="psy" class="psy3" width=100% height=100%></div>
-                <div class="banner-prev-button banner-button">◀</div>
-                <div class="banner-next-button banner-button">▶</div>
+                <div class="banner-prev-button banner-button">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.79999 12.6001L1.19999 7.0001" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M1.16156 7L6.80016 1.43887" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="banner-next-button banner-button">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.2 1.3999L6.8 6.9999" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M6.83843 7L1.19983 12.5611" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                </div>
                 <ul class="banner-pagination"></ul>
             </div>
             <div class="explain-text">
@@ -238,9 +248,9 @@
                 </div>
                 <div class="person-content content">
                     <ul>
-                        <br><h3>싸이</h3><br>
-                        <li><h4>전화번호</h4><h5>010-1234-5678</h5></li><br>
-                        <li><h4>이메일</h4><h5>psy@naver.com</h5></li><br>
+                        <h3>싸이</h3>
+                        <li><h4>전화번호</h4><h5>010-1234-5678</h5></li>
+                        <li><h4>이메일</h4><h5>psy@naver.com</h5></li>
                         <li class="history1">🎶P-nation 대표(약력1)</li>
                         <li class="history1">🎶싸이쇼 티켓 매진(약력2)</li>
                         <li class="history1">🎶강남 스타일(약력3)</li>
@@ -263,9 +273,6 @@
             <div class="review">
                 <div class="review-container">
                     <button onclick="review()" class="review-button">좋아요 <span id ="number">0<span></span>건 🤍</button>
-                </div>
-                <div class="catalog">
-                    <button onclick="history.back()" class="catalog-button">목록</button>
                 </div>
             </div>
         </div>

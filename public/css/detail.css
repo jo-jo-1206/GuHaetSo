@@ -1,4 +1,16 @@
 @media screen and (min-width:1023px){
+    h3{
+        font-size : 18px;
+        margin : 15px 0;
+    }
+
+    h4,h5 {
+        font-size : 14px;
+    }
+    h5{
+        margin-bottom : 22px;
+    }
+
 .explain-text-mobile{
     display: none;
 }
@@ -15,6 +27,7 @@
     align-items: stretch;
     max-width: 1500px;
     margin: auto;
+    margin-top : 44px;
     border:  0px;
 }
 .catalog-button{
@@ -29,10 +42,6 @@
 .explain-container{
     width: 80%;
     margin-right: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
     max-width: 1500px;
     border: 0px;
 }
@@ -49,7 +58,6 @@
 }
 
 .profile-container{
-    width: 20%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -58,7 +66,6 @@
 
 .person-container{
     width: 100%;
-    height: 900px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -82,7 +89,6 @@
     width: 200px;
     height: 154px;
     border-radius: 10px;
-    margin-top: 44px;
 }
 
 .review-container{
@@ -90,12 +96,11 @@
     margin-top: 10px;
     border : 0px;
     width: 100%;
-    border: solid 2px #000000;
+    border: solid 1px #5c5c5c;
     border-radius: 10px;
 }
 
 .review-container button{
-    background-color: white;
     border: 0px;
     font-size: 12pt;
     width: 100%;
@@ -105,10 +110,9 @@
 
 .banner {
     position: relative;
-    width: 790px;
     height: 315px;
     overflow: hidden;
-    margin-top: 35px;
+    
     display:flex;
     user-select:none;
     flex-wrap: nowrap;
@@ -142,7 +146,7 @@
     width: 34px;
     height: 34px;
     border-radius: 100%;
-    background-color: #cccc;
+    background-color: #00000046;
     cursor: pointer;
 }
 
@@ -227,6 +231,10 @@
     margin: 20px
 } 
 }
+
+
+
+
 @media screen and (max-width:1022px){
     .banner {
         position: relative;
@@ -388,3 +396,8 @@
         background-color: #bab9b9e9; 
     }
 } 
+
+
+img{
+    border-radius: 10px;
+}
