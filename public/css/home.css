@@ -7,13 +7,13 @@
         padding-top:48px;
     }
     .content{
-        max-width: 50%;
+        width: 165px;
         max-height: 114px;
         margin-bottom: 55px;
         cursor: pointer;
     }
 .content > img{
-    width: 200px;
+    width: 165px;
     height: 114px;
     border-radius : 10px;
     background-color : #d9d9d9;
