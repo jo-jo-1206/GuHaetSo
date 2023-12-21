@@ -1,3 +1,22 @@
+
+const listContainer = document.querySelector('.list');
+
+// 페이지 로드 시 이미 생성된 카드 삭제
+window.addEventListener('load', function() {
+    removeListChild();
+    
+document.getElementById("submenu").style.display = "none";
+});
+
+function removeListChild(){
+    // list 요소의 모든 하위 요소를 제거합니다.
+    while (listContainer.firstChild) {
+        listContainer.removeChild(listContainer.firstChild);
+    }
+}
+
+
+
 function assignButtonClickEvent(menu) {
     document.querySelectorAll('.' + menu).forEach(function (button) {
         button.addEventListener('click', function () {
@@ -33,6 +52,8 @@ const categoryContainer = document.querySelector('.category-list');
 
 //category-list의 항목을 바꾸는 함수 
 function addNewCategory(categoryTitle, categoryList) {
+
+    removeListChild();
 
     categoryContainer.innerHTML = '';
 
@@ -88,6 +109,7 @@ function addNewCategory(categoryTitle, categoryList) {
 
 // category 매개변수에 따라서 적절한 배열을 사용하여 요소 추가
 switch (category) {
+    
     case 'clean':
         addNewCategory('청소 / 방역', clean);
         break;
@@ -115,7 +137,6 @@ switch (category) {
 }
 
 // 전체 카테고리 버튼을 눌렀을 때 카테고리 메뉴 표시 
-document.getElementById("submenu").style.display = "none";
 
 function openCategory() {
     var popup = document.getElementById("submenu");
@@ -126,13 +147,6 @@ function openCategory() {
         popup.style.opacity = "1";
     }
 }
-
-
-document.querySelectorAll('.Card').forEach(card => {
-    card.addEventListener('click', function () {
-        window.location.href = 'detail.html'; // 현재 클릭한 Card에 대한 상세 페이지 URL로 이동
-    });
-});
 
 // 이벤트 위임을 사용하여 버튼 클릭 시 처리
 categoryContainer.addEventListener('click', function (e) {
@@ -162,6 +176,7 @@ const serverData = {
     cardName: '새로운 가게',
     cardTitle: '새로운 제목'
 };
+
 //예시 카드 생성 버튼 
 function createCardButton() {
 // 새로운 카드 생성 및 추가 
@@ -169,6 +184,7 @@ const newCard = createCard(serverData);
 const cardContainer = document.querySelector('.list'); // 카드를 추가할 컨테이너 선택
 cardContainer.appendChild(newCard); // 새로운 카드를 컨테이너에 추가
 }
+
 function createCard(data) {
     // 새로운 div 요소 생성
     const newCard = document.createElement('div');
@@ -180,7 +196,6 @@ function createCard(data) {
     image.src = data.imageUrl;
     image.alt = 'content-img';
     image.addEventListener('load', function() {
-        alert("로딩완료")
         image.width = '100%';
         image.height = '100%';
         // 이미지가 로드되면 이벤트 핸들러가 실행되어 크기가 설정될 것입니다.
@@ -198,5 +213,12 @@ function createCard(data) {
     newCard.appendChild(imageDiv);
     newCard.appendChild(cardName);
     newCard.appendChild(cardTitle);
+
+    newCard.addEventListener('click', function () {
+        window.location.href = 'detail.html'; // 현재 클릭한 Card에 대한 상세 페이지 URL로 이동
+    });
+    
     return newCard;
+
+    
 }
