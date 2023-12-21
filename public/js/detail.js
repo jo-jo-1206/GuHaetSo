@@ -307,6 +307,9 @@ function updateInformation(newData) {
       image.height = '100%';
       imageDiv.appendChild(image);
       bannerContainer.appendChild(imageDiv);
+      image.onerror = function() {
+        image.src = 'img/Default_image.png'; // 기본 이미지 경로 설정
+    };
   });
 
   const nameElement = document.querySelector('.person-content h3');
@@ -314,6 +317,9 @@ function updateInformation(newData) {
 
   const profileImage = document.querySelector('.person-img img');
   profileImage.src = newData.profileImage;
+  profileImage.onerror = function(){
+    profileImage.src = 'img/Default_image.png'; // 기본 이미지 경로 설정
+  }
 
   const infoList = document.querySelector('.person-content ul');
   infoList.innerHTML = `
