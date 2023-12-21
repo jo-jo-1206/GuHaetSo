@@ -1,42 +1,107 @@
-.content-container {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    max-width: 1024px;
-    margin-top:79px;
+@media screen and (max-width: 1022px) {
+    #menu {
+        display: none;
+    }
+
+    .content-container {
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .category-list h3 {
+        font-size: 20px;
+        padding : 5px 0;
+    }
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .Card {
+        cursor: pointer;
+        width: 160px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .sample-image {
+        width: 100%;
+        height: 118px;
+        border-radius: 10px;
+        background-color: gray;
+        margin-bottom: 2px;
+    }
+
+    .category-big{
+        display : none;
+    }
+
+    .category-small{
+        display : none;
+    }
+
+    select{
+        border: none;
+        font-size : 16px;
+        margin-bottom : 15px;
+    }
+
+    option[disabled]{
+        font-weight: bold;
+    }
 }
 
-.category-container {
-    width: 18%;
-    padding: 5px;
-    border: none;
-    background-color: white;
-    min-width: fit-content;
-    margin-right: 20px;
-    float: left;
-}
+@media screen and (min-width: 1023px) {
+    #menu {
+        width: 100%;
+        color: black;
+        margin: 0 auto;
+        text-align: center;
+        background-color: white;
+        border: black;
+        border-radius: 10px;
+    }
 
-.category-list > h3 {
-    font-size : 22px;
-    font-weight: bold;
-    margin-block-end: 1em;
-}
+    .content-container {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 1024px;
+        margin-top: 79px;
+    }
 
-.category-list > h4{
-    font-weight: bold;
-}
+    .Card {
+        cursor: pointer;
+        width: 178px;
+        height: 155px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
 
-.category-big {
-    padding: 0;
-    margin: 0;
-    font-weight: normal;
-    font-size: 14px;
-}
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 
+    .sample-image {
+        width: 178px;
+        height: 118px;
+        border-radius: 10px;
+        background-color: gray;
+        margin-bottom: 2px;
+    }
+    
 .category-small {
     width: 100%;
     height: 100%;
@@ -57,6 +122,43 @@
     color: #808080;
 }
 
+.category-big {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.category-list>h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-block-end: 1em;
+}
+
+.category-list>h4 {
+    font-weight: bold;
+}
+
+select{
+    display : none;
+}
+}
+
+
+
+
+.category-container {
+    width: 18%;
+    border: none;
+    background-color: white;
+    min-width: 164px;
+    margin-right: 20px;
+    float: left;
+}
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -72,15 +174,7 @@ ul li {
     list-style: none;
 }
 
-#menu {
-    width: 100%;
-    color: black;
-    margin: 0 auto;
-    text-align: center;
-    background-color: white;
-    border: black;
-    border-radius: 10px;
-}
+
 
 #menu>ul {
     display: flex;
@@ -112,18 +206,19 @@ ul li {
 
 
 #submenu {
+    display : none;
     border: 1px solid #d9d9d9;
     border-radius: 10px;
     background-color: #fafafa;
     font-size: 14px;
     width: 100%;
-    max-width:1024px;
+    max-width: 988px;
     box-shadow: -1px 2px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     margin-top: 10px;
     padding: 10px;
-    z-index:10;
-    position : absolute;
+    z-index: 10;
+    position: absolute;
 }
 
 #submenu ul {
@@ -131,18 +226,19 @@ ul li {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* 아이템을 오른쪽으로 정렬합니다 */
+    justify-content: flex-start;
+    /* 아이템을 오른쪽으로 정렬합니다 */
 }
 
-#submenu ul > li {
+#submenu ul>li {
     margin-bottom: 5px;
     margin-right: 37px;
-    margin-left : 20px;
+    margin-left: 20px;
 }
 
 
-#submenu ul > li:last-child{
-    margin-right:0px;
+#submenu ul>li:last-child {
+    margin-right: 0px;
 }
 
 #submenu ul ul {
@@ -160,52 +256,43 @@ ul li {
     text-align: left;
 }
 
-#submenu > ul > li > ul > li > button{
+#submenu>ul>li>ul>li>button {
     color: black;
 }
 
-#submenu > ul > li > ul > li > ul > li >button{
+#submenu>ul>li>ul>li>ul>li>button {
     color: gray;
 }
 
-#submenu > ul > li > ul > li > ul > li:last-child{
-    margin-bottom : 10px;
+#submenu>ul>li>ul>li>ul>li:last-child {
+    margin-bottom: 10px;
 }
 
-.list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
 
-.Card{
-    cursor : pointer;
-    width:178px;
-    height:155px;
-    padding : 10px;
-    margin-bottom: 20px;
-}
 
-.sample-image {
-    width: 178px;
-    height: 118px;
-    border-radius: 10px;
-    background-color: gray;
-    margin-bottom : 2px;
-}
 
-.card-name{
-    margin-bottom : 2px;
+
+.card-name {
+    margin-bottom: 2px;
     font-size: 12px;
 }
 
 
-.category-small button.selected{
+.category-small button.selected {
     color: black;
     font-weight: bold;
 }
 
-button,span {
-    display: inline; /* 인라인 요소로 표시 */
-    white-space: nowrap; /* 텍스트가 한 줄로 유지되도록 설정 */
+button,
+span {
+    display: inline;
+    /* 인라인 요소로 표시 */
+    white-space: nowrap;
+    /* 텍스트가 한 줄로 유지되도록 설정 */
+}
+
+.sample-image img{
+    width: 100%;
+    height: 100%;
+    border-radius : 10px;
 }

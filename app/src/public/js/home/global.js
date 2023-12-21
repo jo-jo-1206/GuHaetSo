@@ -42,9 +42,9 @@ function login() {
   .then((res) => res.json())
   .then((res) => {
     if (res.success) {
-      console.log("로그인 성공");
       
       // 로그인 성공
+      
       document.getElementById("login").style.display = "none";
       document.getElementById("logout").style.display = "block";
       closePopup(); // 로그인 후 팝업 닫기
@@ -52,7 +52,7 @@ function login() {
       location.href = "/";
     } else {
       // 로그인 실패
-      alert(`로그인 실패`);
+      alert(res.msg);
     }
   })
   .catch((err) => {

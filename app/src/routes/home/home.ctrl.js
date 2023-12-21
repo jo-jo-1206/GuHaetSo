@@ -12,6 +12,15 @@ const output = {
     register: (req, res) => {
         res.render("home/register");
     },
+    category: (req, res) => {
+        res.render("home/category");
+    },
+    detail: (req, res) => {
+        res.render("home/detail");
+    },
+    mypage: (req, res) => {
+        res.render("home/mypage");
+    },
 };
 
 const process = {
