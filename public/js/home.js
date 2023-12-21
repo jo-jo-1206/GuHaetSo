@@ -7,6 +7,20 @@ function assignButtonClickEvent(category) {
   });
 }
 
+document.querySelectorAll('.content').forEach(card => {
+  card.addEventListener('click', function () {
+      window.location.href = 'detail.html'; // 현재 클릭한 Content에 대한 상세 페이지 URL로 이동
+  });
+});
+
+document.querySelectorAll('.banner-item').forEach(card => {
+  card.addEventListener('click', function () {
+      window.location.href = 'detail.html'; // 현재 클릭한 Content에 대한 상세 페이지 URL로 이동
+  });
+});
+
+
+
 //버튼 할당
 assignButtonClickEvent('car-repair');
 assignButtonClickEvent('interior');
