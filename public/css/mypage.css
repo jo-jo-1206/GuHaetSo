@@ -253,7 +253,20 @@
     width: auto;
     padding: 10px 120px;
 }
+
+.profile-image label {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #999999;
+    margin-top: 28px;
+    padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
 }
+}
+
+
+
 
 @media screen and (max-width: 1022px) {
 
@@ -318,23 +331,21 @@
     }
 
     #image-show {
-        width: 150px;
-        height: 150px;
+        width: 100%;
+        height: 113px;
         background-color: #d9d9d9;
         border-radius: 10px;
-        margin-top: 35px;
     }
 
     #image-show img {
-        width: 280px;
-        height: 227px;
+        width: 100%;
+        height: 113px;
         border-radius: 10px;
     }
 
     .profile-image {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: flex-start;
     }
 
@@ -346,24 +357,21 @@
     }
 
     .profile-info {
-
-        width: 50%;
+        width: 90%;
+        padding-left : 20px;
     }
 
     form p,
     form input {
         vertical-align: top;
         margin: 0;
-        width: calc(50% - 50px);
-        /* 전체 너비의 절반에서 마진과 패딩을 뺀 값 */
         box-sizing: border-box;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
 
     form p {
         text-align: left;
-        width: 30%;
         font-weight: bold;
         font-size: 15px;
     }
@@ -386,7 +394,7 @@
     }
 
     form textarea {
-        width: 100%;
+        width: 95%;
         border-radius: 5px;
         border: 1px solid #999999;
         margin-bottom: 38px;
@@ -405,12 +413,11 @@
     }
 
     input[type="submit"] {
-        transform: translateX(-50%);
         background-color: #d9d9d9;
         color: white;
         border: none;
+        margin-bottom : 84px;
     }
-
 
 
     input[type="submit"].active {
@@ -433,14 +440,13 @@
     .post-image {
         width: 90px;
         height: 71px;
-        margin-left: 10px;
         border-radius: 10px;
         border: none;
         background-color: #d9d9d9;
     }
 
     .post-title {
-        font-size: 15px;
+        font-size: 14px;
         margin : 0;
     }
 
@@ -461,6 +467,7 @@
         background-color: white;
         margin-right: 3px;
         cursor: pointer;
+        font-size : 10px
     }
 
     .post-items{
@@ -484,7 +491,7 @@
     }
 
     h4 {
-        font-size: 16px;
+        font-size: 18px;
         margin-top : 0;
     }
 
@@ -504,27 +511,35 @@
     margin-bottom: 34px;
 }
 .postAdded input[type="submit"] {
-    position: absolute;
-    margin-top: 64px;
     left: 50%;
-    width: auto;
+    width: 100%;
     padding: 10px 120px;
-}
-}
-
-select {
-    margin-bottom: 84px;
 }
 
 .profile-image label {
     background-color: white;
     border-radius: 5px;
     border: 1px solid #999999;
-    margin-top: 28px;
     padding: 10px 30px;
     font-size: 14px;
     cursor: pointer;
+    margin : auto;
+    
+    margin-top: 28px;
 }
+
+#mobile-profile{
+    position: absolute;
+    width:95%;
+    padding: 0 10px;
+    left : 0;
+}
+}
+
+select {
+    margin-bottom: 42px;
+}
+
 
 #inputfile,
 #chooseFile {

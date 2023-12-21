@@ -44,19 +44,37 @@ function loadFile(event) {
   imageShow.appendChild(image);
 }
 
-// profile-info 요소와 그 하위 요소들을 찾기
-const submitbutton = document.querySelector('input[type="submit"]');
-const inputs = document.querySelectorAll('input, textarea, select');
 
-// 수정이 발생했을 때를 감지하는 함수
-function handleInputChange() {
-  document.querySelector('input[type="submit"]').classList.add('active');
+// Aform 내의 submit 버튼 선택
+const submitButtonA = document.querySelector('#Aform input[type="submit"]');
+const inputsA = document.querySelectorAll('#Aform input, #Aform textarea, #Aform select');
+
+// Bform 내의 submit 버튼 선택
+const submitButtonB = document.querySelector('#Bform input[type="submit"]');
+const inputsB = document.querySelectorAll('#Bform input, #Bform textarea, #Bform select');
+
+// A form 수정 감지 함수
+function handleInputChangeA() {
+  submitButtonA.classList.add('active');
 }
 
-// 입력값이 변경될 때마다 handleInputChange 함수 실행
-inputs.forEach(input => {
-  input.addEventListener('change', handleInputChange);
+// B form 수정 감지 함수
+function handleInputChangeB() {
+  submitButtonB.classList.add('active');
+}
+
+// A form 입력값 변경 시
+inputsA.forEach(input => {
+  input.addEventListener('change', handleInputChangeA);
 });
+
+// B form 입력값 변경 시
+inputsB.forEach(input => {
+  input.addEventListener('change', handleInputChangeB);
+});
+
+
+
 
 const profile = document.querySelector('.modify-profile');
 const post = document.querySelector('.post');
@@ -85,7 +103,7 @@ function modifyPost(){
   profile.classList.remove('deactive');
   post.classList.add('deactive');
   addPost.classList.add('deactive');
-  
+
   // 수정할 게시글 정보 불러오기 
 }
 
