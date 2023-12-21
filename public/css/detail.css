@@ -457,3 +457,8 @@ img {
 #submenu{   
     display : none;
 }
+
+.banner-item img{
+    width: 100%;
+    height: 100%;
+}

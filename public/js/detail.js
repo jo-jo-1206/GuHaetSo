@@ -118,6 +118,7 @@ function nextMove() {
     paginationItems[currSlide - 1].classList.add("active");
   }
 }
+
 function prevMove() {
   currSlide--;
   // 1번째 슬라이드 이하로 넘어가지 않게 하기 위해서
@@ -284,4 +285,85 @@ document.querySelectorAll('.Card').forEach(card => {
   card.addEventListener('click', function () {
       window.location.href = 'detail.html'; // 현재 클릭한 Card에 대한 상세 페이지 URL로 이동
   });
+});
+
+
+
+
+
+
+// 함수로 데이터를 업데이트하고 해당 정보를 새로운 내용으로 변경하는 함수
+function updateInformation(newData) {
+  const bannerContainer = document.querySelector('.banner');
+  bannerContainer.innerHTML = '';
+
+  newData.images.forEach((imageUrl, index) => {
+      const imageDiv = document.createElement('div');
+      imageDiv.classList.add('banner-item', `item${index + 1}`);
+      const image = document.createElement('img');
+      image.src = imageUrl;
+      image.alt = 'banner_img';
+      image.width = '100%';
+      image.height = '100%';
+      imageDiv.appendChild(image);
+      bannerContainer.appendChild(imageDiv);
+  });
+
+  const nameElement = document.querySelector('.person-content h3');
+  nameElement.textContent = newData.name;
+
+  const profileImage = document.querySelector('.person-img img');
+  profileImage.src = newData.profileImage;
+
+  const infoList = document.querySelector('.person-content ul');
+  infoList.innerHTML = `
+      <li><h4>전화번호</h4><h5>${newData.phoneNumber}</h5></li>
+      <li><h4>이메일</h4><h5>${newData.email}</h5></li>
+      ${newData.career.map(career => `<li class="history1">${career}</li>`).join('')}
+  `;
+
+  const likeNumber = document.getElementById('number');
+  number = newData.likeCount;
+  likeNumber.textContent = newData.likeCount + "건 🤍";
+
+  const explainTitle = document.querySelector('.explain-content h2');
+  explainTitle.textContent = newData.title;
+
+  const explainContent = document.querySelector('.explain-content');
+    const explainContentMobile = document.querySelector('.explain-content-mobile');
+
+    newText = newData.explainText;
+    explainContent.innerHTML = `<p>${newText}</p>`;
+    explainContentMobile.innerHTML = `<p>${newText}</p>`;
+}
+
+// 임시 버튼 클릭 시 데이터 업데이트 및 변경
+const tempButton = document.getElementById('tempButton'); // 임시 버튼 선택
+
+tempButton.addEventListener('click', function() {
+  // 서버에서 가져온 새로운 데이터 예시
+  const newServerData = {
+      images: [
+          'img/banner1.jpg',
+          'img/banner2.jpg',
+          'img/banner3.jpg'
+          // ...새로운 이미지 URL을 서버에서 가져와 배열에 저장
+      ],
+      profileImage: 'img/son.jpg',
+      name: '새로운 이름',
+      phoneNumber: '010-1111-2222',
+      email: 'new@naver.com',
+      career: [
+          '새로운 경력1',
+          '새로운 경력2'
+          // ...새로운 경력 정보를 서버에서 가져와 배열에 저장
+      ],
+      likeCount: 20, // 새로운 좋아요 수
+      explainText: '새로운 설명 내용입니다.',
+      title : '새로운 타이틀'
+
+  };
+
+  // 데이터 업데이트 및 해당 정보 변경 함수 호출
+  updateInformation(newServerData);
 });
