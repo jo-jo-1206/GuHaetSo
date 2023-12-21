@@ -152,3 +152,60 @@ categoryContainer.addEventListener('click', function (e) {
         }
     }
 });
+
+
+
+// card 작성
+// 예시로 가져온 데이터
+const serverData = {
+    imageUrl: 'img/aircon.jpg',
+    cardName: '새로운 가게',
+    cardTitle: '새로운 제목'
+};
+
+//예시 카드 생성 버튼 
+function createCardButton() {
+// 새로운 카드 생성 및 추가 
+const newCard = createCard(serverData);
+const cardContainer = document.querySelector('.list'); // 카드를 추가할 컨테이너 선택
+cardContainer.appendChild(newCard); // 새로운 카드를 컨테이너에 추가
+
+}
+
+function createCard(data) {
+    // 새로운 div 요소 생성
+    const newCard = document.createElement('div');
+    newCard.classList.add('Card');
+
+    // 이미지 요소 생성
+    const imageDiv = document.createElement('div');
+    imageDiv.classList.add('sample-image', 'item1');
+    const image = document.createElement('img');
+    image.src = data.imageUrl;
+    image.alt = 'content-img';
+    image.addEventListener('load', function() {
+        alert("로딩완료")
+        image.width = '100%';
+        image.height = '100%';
+        // 이미지가 로드되면 이벤트 핸들러가 실행되어 크기가 설정될 것입니다.
+    });
+    imageDiv.appendChild(image);
+
+    // card-name 요소 생성
+    const cardName = document.createElement('p');
+    cardName.classList.add('card-name');
+    cardName.textContent = data.cardName;
+
+    // card-title 요소 생성
+    const cardTitle = document.createElement('h4');
+    cardTitle.classList.add('card-title');
+    cardTitle.textContent = data.cardTitle;
+
+    // 생성한 요소들을 새로운 Card에 추가
+    newCard.appendChild(imageDiv);
+    newCard.appendChild(cardName);
+    newCard.appendChild(cardTitle);
+
+    return newCard;
+}
+
