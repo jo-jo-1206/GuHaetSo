@@ -5,7 +5,7 @@ const db = require("../config/db");
 class PosterStorage {
     static getPosterInfo(id) {
         return new Promise((resolve, reject) => {
-            const query = "SELECT * FROM posters WHERE id = ?;";
+            const query = "SELECT * FROM posters WHERE poster_id = ?;";
             db.query(query, [id], (err, data) => {
                 if (err) reject(`${err}`);
                 resolve(data[0]);
