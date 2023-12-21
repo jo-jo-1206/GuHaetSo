@@ -76,3 +76,25 @@ categoryButton.addEventListener('click', () => {
     }
   });
 });
+
+
+//search-button (돋보기) 클릭 시 form 제출
+const searchButton = document.querySelector('.search-button');
+
+searchButton.addEventListener('click', function(event) {
+    // 기본 동작(여기서는 form 제출)을 막습니다.
+    event.preventDefault();
+    // form 요소를 선택합니다.
+    const form = document.querySelector('.search-container');
+
+    const inputField = form.querySelector('.search-input');
+
+    // 입력 필드의 값이 비어 있는지 확인합니다.
+    if (inputField.value.trim() === '') {
+        // 값이 비어 있다면 알림창을 띄웁니다.
+        alert('검색어를 입력해주세요.');
+    } else {
+        // 값이 비어 있지 않다면 form을 제출합니다.
+        form.submit();
+    }
+});
