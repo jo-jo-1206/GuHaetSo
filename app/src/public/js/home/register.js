@@ -23,12 +23,13 @@ function register() {
     }
 
     const req = {
-        name: input_name.value,
-        email: input_email.value,
-        id: input_id.value,
-        password: input_password.value,
+        user_id: input_id.value,
+        user_name: input_name.value,
+        user_password: input_password.value,
+        user_email: input_email.value,
     };
 
+    console.log(req);
     fetch("/register", {
         method: "POST",
         headers: {
