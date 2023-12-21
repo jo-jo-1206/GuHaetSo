@@ -1,6 +1,6 @@
 "use strict";
 
-// 모듈
+// 모듈 import
 const express = require('express');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
