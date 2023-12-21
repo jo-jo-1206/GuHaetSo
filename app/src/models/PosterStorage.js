@@ -2,10 +2,10 @@
 
 const db = require("../config/db");
 
-class UserStorage {
-    static getUserInfo(id) {
+class PosterStorage {
+    static getPosterInfo(id) {
         return new Promise((resolve, reject) => {
-            const query = "SELECT * FROM users WHERE id = ?;";
+            const query = "SELECT * FROM posters WHERE id = ?;";
             db.query(query, [id], (err, data) => {
                 if (err) reject(`${err}`);
                 resolve(data[0]);
@@ -13,17 +13,17 @@ class UserStorage {
         })
     }
 
-    static async save(userInfo) {
+    static async save(posterInfo) {
         return new Promise((resolve, reject) => {
-            const query = "INSERT INTO users(user_id, user_name, user_password, user_phoneNumber, user_email) VALUES(?, ?, ?, ?, ?);";
+            const query = "INSERT INTO posters(poster_id, user_id, poster_title, poster_content, poster_category) VALUES(?, ?, ?, ?, ?);";
             db.query(
                 query,
                 [
-                    userInfo.user_id,
-                    userInfo.user_name,
-                    userInfo.user_password,
-                    userInfo.user_phoneNumber,
-                    userInfo.user_email
+                    posterInfo.poster_id,
+                    posterInfo.user_id,
+                    posterInfo.poster_title,
+                    posterInfo.poster_content,
+                    posterInfo.poster_category
                 ],
                 (err) => {
                 if (err) reject(`${err}`);
@@ -33,4 +33,4 @@ class UserStorage {
     }
 }
 
-module.exports = UserStorage;
+module.exports = PosterStorage;
