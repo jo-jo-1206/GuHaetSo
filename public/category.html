@@ -11,13 +11,12 @@
 <body>
     <div class="menu-container"> <!-- 메뉴바 -->
         <a href="home.html"><img src="img/logo.jpg" alt="Logo" class="logo"></a>
-        <div class="search-container">
+        <form action="category.html" class="search-container">
             <button class="search-button">
                 <img src="img/search.png" alt="search-img" class="search-img">
             </button>
             <input type="text" class="search-input" placeholder="검색어를 입력하세요">
-
-        </div>
+        </form>
         <div id=login>
             <button onclick="openPopup()" class="login-button">로그인</button>
             <a href="signup.html" class="signup-button">회원가입</a>
@@ -34,8 +33,8 @@
             </div>
         </div>
         <div id=logout>
-            <button onclick="logout()">로그아웃</button>
-            <button onclick="goToProfile()">마이페이지</button>
+            <button id="logout-button" onclick="logout()">로그아웃</button>
+            <a href="mypage.html">마이페이지</a>
         </div>
     </div>
 
@@ -69,22 +68,22 @@
                 <ul>
                     <li> 부품교체
                         <ul>
-                            <li><button class="car tire">타이어</button></li>
-                            <li><button class="car oil">오일</button></li>
-                            <li><button class="car filter">필터</button></li>
-                            <li><button class="car break">브레이크 패드</button></li>
+                            <li><button class="car-repair tire">타이어</button></li>
+                            <li><button class="car-repair oil">오일</button></li>
+                            <li><button class="car-repair filter">필터</button></li>
+                            <li><button class="car-repair break">브레이크 패드</button></li>
                         </ul>
                     </li>
                     <li> 자동차 검사
                         <ul>
-                            <li><button class="car full-test">전체검사</button></li>
-                            <li><button class="car test">전체검사</button></li>
+                            <li><button class="car-repair full-test">전체검사</button></li>
+                            <li><button class="car-repair test">전체검사</button></li>
                         </ul>
                     </li>
                     <li> 세차 및 도색
                         <ul>
-                            <li><button class="car wash">세차</button></li>
-                            <li><button class="car paint">도색</button></li>
+                            <li><button class="car-repair wash">세차</button></li>
+                            <li><button class="car-repair paint">도색</button></li>
                         </ul>
                     </li>
                 </ul>
@@ -96,7 +95,7 @@
                             <li><button class="making card">명함</button></li>
                             <li><button class="making leaflet">전단지</button></li>
                             <li><button class="making menu">메뉴판</button></li>
-                            <li><button class="making banner">현수막</button></li>
+                            <li><button class="making advertise">현수막</button></li>
                         </ul>
                     </li>
                     <li> 핸드메이드
@@ -154,16 +153,16 @@
                 <ul>
                     <li> 펫시터
                         <ul>
-                            <li><button class="pet cat">탁묘, 탁견</button></li>
-                            <li><button class="pet visit">방문 돌봄</button></li>
-                            <li><button class="pet walk">산책</button></li>
-                            <li><button class="pet train">훈련</button></li>
+                            <li><button class="dog cat">탁묘, 탁견</button></li>
+                            <li><button class="dog visit">방문 돌봄</button></li>
+                            <li><button class="dog walk">산책</button></li>
+                            <li><button class="dog train">훈련</button></li>
                         </ul>
                     </li>
                     <li> 미용
                         <ul>
-                            <li><button class="pet visit-cut">방문 미용</button></li>
-                            <li><button class="pet cut">미용실</button></li>
+                            <li><button class="dog visit-cut">방문 미용</button></li>
+                            <li><button class="dog cut">미용실</button></li>
                         </ul>
                     </li>
                 </ul>
@@ -172,17 +171,17 @@
                 <ul>
                     <li> 방문청소
                         <ul>
-                            <li><button class="cleaning aircon">에어컨 청소</button></li>
-                            <li><button class="cleaning house">입주 청소</button></li>
-                            <li><button class="cleaning general">일반 청소</button></li>
-                            <li><button class="cleaning sewer">하수구 청소</button></li>
+                            <li><button class="clean aircon">에어컨 청소</button></li>
+                            <li><button class="clean house">입주 청소</button></li>
+                            <li><button class="clean general">일반 청소</button></li>
+                            <li><button class="clean sewer">하수구 청소</button></li>
                         </ul>
                     </li>
                     <li> 방역
                         <ul>
-                            <li><button class="cleaning cockroach">바퀴벌레</button></li>
-                            <li><button class="cleaning ant">개미</button></li>
-                            <li><button class="cleaning bug">그 외</button></li>
+                            <li><button class="clean cockroach">바퀴벌레</button></li>
+                            <li><button class="clean ant">개미</button></li>
+                            <li><button class="clean bug">그 외</button></li>
                         </ul>
                     </li>
                 </ul>
@@ -191,12 +190,12 @@
                 <ul>
                     <li> 스포츠 용역
                         <ul>
-                            <li><button class="sports soccer">축구</button></li>
-                            <li><button class="sports basketball">농구</button></li>
-                            <li><button class="sports baseball">야구</button></li>
-                            <li><button class="sports volleyball">배구</button></li>
-                            <li><button class="sports badminton">배드민턴</button></li>
-                            <li><button class="sports etc">기타</button></li>
+                            <li><button class="sport soccer">축구</button></li>
+                            <li><button class="sport basketball">농구</button></li>
+                            <li><button class="sport baseball">야구</button></li>
+                            <li><button class="sport volleyball">배구</button></li>
+                            <li><button class="sport badminton">배드민턴</button></li>
+                            <li><button class="sport     etc">기타</button></li>
                         </ul>
                     </li>
                 </ul>
@@ -207,6 +206,7 @@
         <div class="category-container">
             <div class="category-list">
                 <h3>카테고리</h3>
+                <select></select>
                 <h3 class="category-big">운동</h3>
                 <div class="category-small">
                     <!--
@@ -232,53 +232,119 @@
         <div class="list">
             <!-- 샘플 항목 -->
             <div class="Card">
-                <div class="sample-image item1">샘플 이미지</div>
+                <div class="sample-image item1"><img src="img/car.jpg" width=100% height=100% alt="content-img"></div>
+                <p class="card-name">차차차 정비소</p>
+                <h4 class="card-title">타이어는 내가 최고</h4>
+            </div>
+            <div class="Card">
+                <div class="sample-image item1"><img src="img/tire.jpg" width=100% height=100% alt="content-img"></div>
+                <p class="card-name">세상에 이런 타이어</p>
+                <h4 class="card-title">타이어 즉시 교체</h4>
+            </div>
+            <div class="Card">
+                <div class="sample-image item1"><img src="img/mis.jpg" width=100% height=100% alt="content-img"></div>
+                <p class="card-name">미ㅅ린</p>
+                <h4 class="card-title">타이어 바꿔드려요~</h4>
+            </div>
+            <div class="Card">
+                <div class="sample-image item1"><img src="img/muscle.jpg" width=100% height=100% alt="content-img">
+                </div>
+                <p class="card-name">근육맨</p>
+                <h4 class="card-title">근육으로 타이어</h4>
+            </div>
+            <div class="Card">
+                <div class="sample-image item1"><img src="img/carcenter.jpg" width=100% height=100% alt="content-img">
+                </div>
+                <p class="card-name">이게 돼 카센터</p>
+                <h4 class="card-title">타이어 저만 믿어요!</h4>
+            </div>
+            <div class="Card">
+                <div class="sample-image item1"><img src="img/mis.jpg" width=100% height=100% alt="content-img"></div>
+                <p class="card-name">미ㅅ린</p>
+                <h4 class="card-title">이게 바로 타이어</h4>
+            </div>
+            <div class="Card">
+                <div class="sample-image item1"><img src="img/tire.jpg" width=100% height=100% alt="content-img"></div>
                 <p class="card-name">JJ정비소</p>
                 <h4 class="card-title">자동차 타이어 교체</h4>
             </div>
             <div class="Card">
-                <div class="sample-image item1">샘플 이미지</div>
-                <p class="card-name">JJ정비소</p>
-                <h4 class="card-title">자동차 타이어 교체</h4>
+                <div class="sample-image item1"><img src="img/carcenter.jpg" width=100% height=100% alt="content-img">
+                </div>
+                <p class="card-name">슈퍼카센터</p>
+                <h4 class="card-title">타이어 교체!!</h4>
             </div>
             <div class="Card">
-                <div class="sample-image item1">샘플 이미지</div>
-                <p class="card-name">JJ정비소</p>
-                <h4 class="card-title">자동차 타이어 교체</h4>
-            </div>
-            <div class="Card">
-                <div class="sample-image item1">샘플 이미지</div>
-                <p class="card-name">JJ정비소</p>
-                <h4 class="card-title">자동차 타이어 교체</h4>
-            </div>
-            <div class="Card">
-                <div class="sample-image item1">샘플 이미지</div>
-                <p class="card-name">JJ정비소</p>
-                <h4 class="card-title">자동차 타이어 교체</h4>
-            </div>
-            <div class="Card">
-                <div class="sample-image item1">샘플 이미지</div>
-                <p class="card-name">JJ정비소</p>
-                <h4 class="card-title">자동차 타이어 교체</h4>
-            </div>
-            <div class="Card">
-                <div class="sample-image item1">샘플 이미지</div>
-                <p class="card-name">JJ정비소</p>
-                <h4 class="card-title">자동차 타이어 교체</h4>
-            </div>
-            <div class="Card">
-                <div class="sample-image item1">샘플 이미지</div>
-                <p class="card-name">JJ정비소</p>
-                <h4 class="card-title">자동차 타이어 교체</h4>
-            </div>
-            <div class="Card">
-                <div class="sample-image item1">샘플 이미지</div>
-                <p class="card-name">JJ정비소</p>
-                <h4 class="card-title">자동차 타이어 교체</h4>
+                <div class="sample-image item1"><img src="img/muscle.jpg" width=100% height=100% alt="content-img">
+                </div>
+                <p class="card-name">강한남자</p>
+                <h4 class="card-title">타이어 내개로 오라~</h4>
             </div>
             <!--여기까지 샘플-->
+
+
         </div>
     </div>
+    <!-- 데이터 추가 테스트용 버튼 -->
+    <button id="createCardButton" onclick="createCardButton()">카드 생성</button>
+
+
+    <!-- 모바일 햄버거 버튼 -->
+    <div class="navbar_overlay"></div>
+
+    <div class="navbar_burger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+    </div>
+    <div class="navbar_menu">
+        <hr>
+        <div class="big-category">
+            <button><br>카테고리</button>
+            <svg class="svg-category" xmlns="http://www.w3.org/2000/svg" width="24" height="12" viewBox="0 0 24 12">
+                <path d="M2 2 L12 10 L22 2" stroke="black" stroke-width="2" fill="none" />
+            </svg>
+        </div>
+
+        <div class="category-container-mobile">
+            <button class="category-button car-repair">
+                <span class="button-text">・ 자동차 정비</span>
+            </button>
+            <button class="category-button interior">
+                <span class="button-text">・ 인테리어</span>
+            </button>
+            <button class="category-button lesson">
+                <span class="button-text">・ 레슨</span>
+            </button>
+            <button class="category-button making">
+                <span class="button-text">・ 제작의뢰</span>
+            </button>
+            <button class="category-button dog">
+                <span class="button-text">・ 돌보미</span>
+            </button>
+            <button class="category-button clean">
+                <span class="button-text">・ 청소, 방역</span>
+            </button>
+            <button class="category-button sport">
+                <span class="button-text">・ 스포츠 용역</span>
+            </button>
+        </div>
+
+        <a href="home.html">공지사항</a>
+        <a href="home.html">FAQ</a>
+        <a href="home.html">이벤트</a>
+        <div class="navbar_burger_back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
+
+        </div>
+    </div>
+
     <script src="js/category.js"></script>
     <script src="js/global.js"></script>
 </body>

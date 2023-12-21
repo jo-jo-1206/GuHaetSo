@@ -11,13 +11,12 @@
 <body>
     <div class="menu-container"> <!-- 메뉴바 -->
         <a href="home.html"><img src="img/logo.jpg" alt="Logo" class="logo"></a>
-        <div class="search-container">
+        <form action ="category.html" class = "search-container">
             <button class="search-button">
                 <img src="img/search.png" alt="search-img" class="search-img">
             </button>
-            <input type="text" class="search-input" placeholder="검색어를 입력하세요">
-
-        </div>
+            <input type="text" class="search-input" placeholder="검색어를 입력하세요"> 
+        </form>
         <div id=login>
             <button onclick="openPopup()" class="login-button">로그인</button>
             <a href="signup.html" class="signup-button">회원가입</a>
@@ -34,8 +33,8 @@
             </div>
         </div>
         <div id=logout>
-            <button onclick="logout()">로그아웃</button>
-            <button onclick="goToProfile()">마이페이지</button>
+            <button id="logout-button" onclick="logout()">로그아웃</button>
+            <a href = "mypage.html">마이페이지</a>
         </div>
     </div>
 
@@ -47,43 +46,57 @@
         </a>
         -->
         <div class="banner banner-container"> <!--신장개업 홍보 배너-->
-            <div class="banner-item item1">1</div>
-            <div class="banner-item item2">2</div>
-            <div class="banner-item item3">3</div>
-            <div class="banner-item item4">4</div>
-            <div class="banner-item item5">5</div>
-            <div class="banner-prev-button banner-button">◁</div>
-            <div class="banner-next-button banner-button">▷</div>
+            <div class="banner-item item1"><img src="img/banner1.jpg" alt="banner1" class="banner1" width=100% height=100%></div>
+            <div class="banner-item item2"><img src="img/banner2.jpg" alt="banner2" class="banner2" width=100% height=100%></div>
+            <div class="banner-item item3"><img src="img/banner3.jpg" alt="banner3" class="banner3" width=100% height=100%></div>
+            <div class="banner-item item4"><img src="img/banner4.jpg" alt="banner4" class="banner4" width=100% height=100%></div>
+            <div class="banner-item item5"><img src="img/banner5.jpg" alt="banner5" class="banner5" width=100% height=100%></div>
+            <div class="banner-prev-button banner-button">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.79999 12.6001L1.19999 7.0001" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M1.16156 7L6.80016 1.43887" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+            </div>
+            <div class="banner-next-button banner-button">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.2 1.3999L6.8 6.9999" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M6.83843 7L1.19983 12.5611" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    
+            </div>
             <ul class="banner-pagination"></ul>
         </div>
-        <button class="category-button car-repair">
-            <img src="img/car-repair.png" alt="Button 1" class="button-img">
-            <span class="button-text">자동차 정비</span>
-        </button>
-        <button class="category-button interior">
-            <img src="img/home.png" alt="Button 2" class="button-img">
-            <span class="button-text">인테리어</span>
-        </button>
-        <button class="category-button lesson">
-            <img src="img/lesson.png" alt="Button 3" class="button-img">
-            <span class="button-text">레슨</span>
-        </button>
-        <button class="category-button making">
-            <img src="img/making.png" alt="Button 4" class="button-img">
-            <span class="button-text">제작의뢰</span>
-        </button>
-        <button class="category-button dog">
-            <img src="img/dog.png" alt="Button 5" class="button-img">
-            <span class="button-text">돌보미</span>
-        </button>
-        <button class="category-button clean">
-            <img src="img/clean.png" alt="Button 6" class="button-img">
-            <span class="button-text">청소, 방역</span>
-        </button>
-        <button class="category-button sport">
-            <img src="img/soccer-ball.png" alt="Button 7" class="button-img">
-            <span class="button-text">스포츠 용역</span>
-        </button>
+
+        <div class="category-button-container">
+            <button class="category-button car-repair">
+                <img src="img/car-repair.png" alt="Button 1" class="button-img">
+                <span class="button-text">자동차 정비</span>
+            </button>
+            <button class="category-button interior">
+                <img src="img/home.png" alt="Button 2" class="button-img">
+                <span class="button-text">인테리어</span>
+            </button>
+            <button class="category-button lesson">
+                <img src="img/lesson.png" alt="Button 3" class="button-img">
+                <span class="button-text">레슨</span>
+            </button>
+            <button class="category-button making">
+                <img src="img/making.png" alt="Button 4" class="button-img">
+                <span class="button-text">제작의뢰</span>
+            </button>
+            <button class="category-button dog">
+                <img src="img/dog.png" alt="Button 5" class="button-img">
+                <span class="button-text">돌보미</span>
+            </button>
+            <button class="category-button clean">
+                <img src="img/clean.png" alt="Button 6" class="button-img">
+                <span class="button-text">청소, 방역</span>
+            </button>
+            <button class="category-button sport">
+                <img src="img/soccer-ball.png" alt="Button 7" class="button-img">
+                <span class="button-text">스포츠 용역</span>
+            </button>
+        </div>
     </div>
 
     <div class="top10"> <!--컨텐츠-->
@@ -92,66 +105,128 @@
 
         <div class="content-container">
             <!-- 샘플 컨텐츠들 -->
+
+            
             <div class="content">
-                <img src="img/car-repair.png" alt="content-img">
+                <img src="img/car.jpg" width=100% height=100% alt="content-img">
                 <div class="content-text">
-                    <p> 자동차 정비 | 기본 검사 </p> <!--대분류 | 소분류-->
+                    <a href="detail.html">자동차 정비 | 기본 검사 </a> <!--대분류 | 소분류-->
                 </div>
             </div>
             <div class="content">
-                <img src="img/car-repair.png" alt="content-img">
+                <img src="img/ant.jpg" width=100% height=100% alt="content-img">
                 <div class="content-text">
-                    <p> 자동차 정비 | 기본 검사 </p>
+                    <a href="detail.html">방역 | 개미 </a>
+                </div>
+            </div>
+            <!-- 이하 br 태그 지울것 -->
+            <div class="content">
+                <img src="img/psy.jpg" width=100% height=100% alt="content-img">
+                <div class="content-text">
+                    <a href="detail.html"> <br> 취미 레슨 | 보컬 </a>
                 </div>
             </div>
             <div class="content">
-                <img src="img/car-repair.png" alt="content-img">
+                <img src="img/son.jpg" width=100% height=100% alt="content-img">
                 <div class="content-text">
-                    <p> 자동차 정비 | 기본 검사 </p>
+                    <a href="detail.html"> <br> 스포츠 용역 | 축구 </a>
                 </div>
             </div>
             <div class="content">
-                <img src="img/car-repair.png" alt="content-img">
+                <img src="img/car.jpg" width=100% height=100% alt="content-img">
                 <div class="content-text">
-                    <p> 자동차 정비 | 기본 검사 </p>
+                    <a href="detail.html"> <br> 자동차 정비 | 타이어 교체 </a>
                 </div>
             </div>
             <div class="content">
-                <img src="img/car-repair.png" alt="content-img">
+                <img src="img/dog.jpg" width=100% height=100% alt="content-img">
                 <div class="content-text">
-                    <p> 자동차 정비 | 기본 검사 </p>
+                    <a href="detail.html"> <br> 돌보미 | 탁견 </a>
                 </div>
             </div>
             <div class="content">
-                <img src="img/car-repair.png" alt="content-img">
+                <img src="img/jewely.jpg" width=100% height=100% alt="content-img">
                 <div class="content-text">
-                    <p> 자동차 정비 | 기본 검사 </p>
+                    <a href="detail.html"> <br> 제작 의뢰 | 보석 </a>
                 </div>
             </div>
             <div class="content">
-                <img src="img/car-repair.png" alt="content-img">
+                <img src="img/house.jpg" width=100% height=100% alt="content-img">
                 <div class="content-text">
-                    <p> 자동차 정비 | 기본 검사 </p>
+                    <a href="detail.html"> <br> 인테리어 | 견적 상담 </a>
                 </div>
             </div>
             <div class="content">
-                <img src="img/car-repair.png" alt="content-img">
+                <img src="img/house.jpg" width=100% height=100% alt="content-img">
                 <div class="content-text">
-                    <p> 자동차 정비 | 기본 검사 </p>
+                    <a href="detail.html"> <br> 인테리어 | 도배 </a>
                 </div>
             </div>
             <div class="content">
-                <img src="img/car-repair.png" alt="content-img">
+                <img src="img/aircon.jpg" width=100% height=100% alt="content-img">
                 <div class="content-text">
-                    <p> 자동차 정비 | 기본 검사 </p>
+                    <a href="detail.html"> <br> 청소 | 에어컨 </a>
                 </div>
             </div>
-            <div class="content">
-                <img src="img/car-repair.png" alt="content-img">
-                <div class="content-text">
-                    <p> 자동차 정비 | 기본 검사 </p>
-                </div>
-            </div>
+            <!--샘플 끝-->
+        </div>
+    </div>
+
+
+    <!-- 모바일 요소 (햄버거 버튼)-->
+    <div class="navbar_overlay"></div>
+
+    <div class="navbar_burger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+    </div>
+
+    <div class="navbar_menu">
+        <hr>
+        <div class="big-category">
+            <button>카테고리</button>
+            <svg class="svg-category" xmlns="http://www.w3.org/2000/svg" width="24" height="12" viewBox="0 0 24 12">
+                <path d="M2 2 L12 10 L22 2" stroke="black" stroke-width="2" fill="none" />
+            </svg>
+        </div>
+
+        <div class="category-container-mobile">
+            <button class="category-button car-repair">
+                <span class="button-text">・ 자동차 정비</span>
+            </button>
+            <button class="category-button interior">
+                <span class="button-text">・ 인테리어</span>
+            </button>
+            <button class="category-button lesson">
+                <span class="button-text">・ 레슨</span>
+            </button>
+            <button class="category-button making">
+                <span class="button-text">・ 제작의뢰</span>
+            </button>
+            <button class="category-button dog">
+                <span class="button-text">・ 돌보미</span>
+            </button>
+            <button class="category-button clean">
+                <span class="button-text">・ 청소, 방역</span>
+            </button>
+            <button class="category-button sport">
+                <span class="button-text">・ 스포츠 용역</span>
+            </button>
+        </div>
+
+        <a href="home.html">공지사항</a>
+        <a href="home.html">FAQ</a>
+        <a href="home.html">이벤트</a>
+        <div class="navbar_burger_back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
+
         </div>
     </div>
     <script src="js/home.js"></script>

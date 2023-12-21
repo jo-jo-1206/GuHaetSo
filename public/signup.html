@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>구했소</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/signup.css">
-    </head>
-    <body>
-        <div class="title-container">
-            <a href="home.html"><img src="img/logo.jpg" alt="Logo" class="logo"></a>
-            <h1 class="sign-up">회원가입</h1>
-        </div>
-        
-        <form action ="sign-up" class = input-container>
+
+<head>
+    <title>구했소</title>
+    
+    <meta charset="UTF-8" name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+    <div class="title-container">
+        <a href="home.html"><img src="img/logo.jpg" alt="Logo" class="logo"></a>
+
+    </div>
+    <div class="sign-up-container">
+
+        <h3 class="sign-up">회원가입</h3>
+        <form action="home.html" class=input-container id="signup-form">
             <h3>이름</h3>
-            <input type="text" name="name" placeholder="이름" class="input-box">
-            <h3>카테고리</h3>
-            <select name="category" id="category">
-                <option value ="car-repair">자동차 정비</option>
-                <option value="home">인테리어</option>
-                <option value="lesson">레슨</option>
-                <option value="making">제작의뢰</option>
-                <option value="dog">돌보미</option>
-                <option value="clean">청소, 방역</option>
-                <option value="sport">스포츠 용역</option>
-            </select>
-            <h3>전화번호</h3>
-            <input type="text" name="phone" placeholder="전화번호" class="input-box">
+            <input type="text" name="name" placeholder="이름(실명)을 입력해주세요" class="input-box">
             <h3>이메일</h3>
-            <input type="text" name="email" placeholder="이메일" class="input-box">
-            <h3>ID</h3>
-            <input type="text" name="id" placeholder="아이디" class="input-box">
+            <input type="text" name="email" placeholder="example@guhatso.com" class="input-box">
+            <h3>아이디</h3>
+            <input type="text" name="id" placeholder="guhatso" class="input-box">
             <h3>비밀번호</h3>
-            <input type="password" name="pw" placeholder="비밀번호" class="input-box">
+            <input type="password" name="pw" placeholder="영문+숫자 조합 8자리 이상 입력해주세요" class="input-box">
             <h3>비밀번호 확인</h3>
-            <input type="password" name="pw2" placeholder="비밀번호 확인" class="input-box">
-            <input type="submit" value="가입하기">
+            <input type="password" name="pw2" placeholder="비밀번호를 입력하세요" class="input-box">
+            <input type="submit" value="가입하기" class="submit-button">
         </form>
-    </body>
+    </div>
+    
+    <script src="js/signup.js"></script>
+</body>
+
 </html>
