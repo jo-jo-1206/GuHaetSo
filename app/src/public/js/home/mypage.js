@@ -121,5 +121,53 @@ function deletePost(){
 
 // 조성우
 window.onload = function() {
-    
+    /**
+     * 사용자 정보를 불러오기
+     */
+    const userId = sessionStorage.getItem('user_id');
+
+    fetch(`/userinfo/${userId}`)
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        document.querySelector('input[name="phone"]').value = data.userInfo.user_phone || '';
+        document.querySelector('input[name="email"]').value = data.userInfo.user_email || '';
+        document.querySelector('textarea[name="introduce"]').value = data.userInfo.user_carrer || '';
+        document.querySelector('select[name="country"]').value = data.userInfo.user_region || "Seoul";
+      } else {
+        console.error(data.msg);
+      }
+    });
 };
+
+document.querySelector("#btn_updateUser").addEventListener("click", function(event) {
+    /**
+     * 사용자 정보 수정하기
+     */
+    event.preventDefault();
+
+    const updatedUserInfo = {
+        user_phone: document.querySelector('input[name="phone"]').value,
+        user_email: document.querySelector('input[name="email"]').value,
+        user_carrer: document.querySelector('textarea[name="introduce"]').value,
+        user_region: document.querySelector('select[name="country"]').value,
+    };
+
+    const userId = sessionStorage.getItem('user_id');
+
+    fetch(`/updateUser/${userId}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(updatedUserInfo)
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        alert("프로필이 성공적으로 업데이트되었습니다.")
+      } else {
+        alert("프로필 업데이트에 실패했습니다.");
+      }
+    })
+});

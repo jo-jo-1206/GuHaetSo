@@ -15,7 +15,7 @@ class User {
         
             if (user_id) {
                 if (user_id === client.user_id && user_password === client.user_password) {
-                    return { success: true };
+                    return { success: true, user_id: user_id };
                 }
     
                 return { success: false, msg: "비밀번호가 틀렸습니다."};
@@ -37,6 +37,15 @@ class User {
             return { success: false, msg: err };
         }
         
+    }
+
+    static async update(id, userInfo) {
+        try {
+            const response = await UserStorage.updateUser(id, userInfo);
+            return response;
+        } catch (err) {
+            throw err;
+        }
     }
 }
 

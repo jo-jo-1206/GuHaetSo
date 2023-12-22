@@ -30,6 +30,25 @@ class UserStorage {
             });
         })
     }
+
+    static updateUser(id, userInfo) {
+        return new Promise((resolve, reject) => {
+            const query = "UPDATE users SET user_phone = ?, user_email = ?, user_carrer = ?, user_region = ? WHERE user_id = ?;"
+            db.query(
+                query,
+                [
+                    userInfo.user_phone,
+                    userInfo.user_email,
+                    userInfo.user_carrer,
+                    userInfo.user_region,
+                    id
+                ],
+                (err, result) => {
+                    if (err) reject(`${err}`);
+                    resolve({ success: true, msg: "프로필이 업데이트되었습니다. "});
+            });
+        });
+    }
 }
 
 module.exports = UserStorage;

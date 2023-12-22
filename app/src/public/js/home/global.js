@@ -30,8 +30,10 @@ btn_logout.addEventListener("click", function() {
 });
 
 function checkLoginStatus() {
-  const userName = sessionStorage.getItem('user_name');
-  if (userName) {
+  const userId = sessionStorage.getItem('user_id');
+  console.log(userId);
+
+  if (userId) {
     document.getElementById("login").style.display = "none";
     document.getElementById("logout").style.display = "block";
   } else {
@@ -58,7 +60,8 @@ function login() {
   .then((res) => {
     if (res.success) {
       // 로그인 성공
-      sessionStorage.setItem("user_name", res.user_name);
+      console.log(res);
+      sessionStorage.setItem("user_id", res.user_id);
       checkLoginStatus();
       closePopup(); // 로그인 후 팝업 닫기
     } else {
@@ -72,7 +75,7 @@ function login() {
 }
 
 function logout(){
-  sessionStorage.removeItem("user_name");
+  sessionStorage.removeItem("user_id");
   checkLoginStatus();
 }
 /*
