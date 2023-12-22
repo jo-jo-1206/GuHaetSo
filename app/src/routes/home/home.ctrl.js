@@ -3,6 +3,9 @@
 const User = require("../../models/User");
 const UserStorage = require("../../models/UserStorage");
 
+const Poster = require("../../models/Poster");
+const PosterStorage = require("../../models/PosterStorage");
+
 const output = {
     home: (req, res) => {
         res.render("home/index");

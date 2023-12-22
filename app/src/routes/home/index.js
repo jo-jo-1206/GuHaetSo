@@ -17,5 +17,6 @@ router.get('/userinfo/:id', ctrl.process.getUserInfo);
 router.post('/login', ctrl.process.login);
 router.post('/register', ctrl.process.register);
 router.post('/updateUser/:id', ctrl.process.updateUserInfo);
+router.post('/registerPost', ctrl.process.registerPoster);
 
 module.exports = router;
