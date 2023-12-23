@@ -20,7 +20,7 @@ function removeListChild(){
 function assignButtonClickEvent(menu) {
     document.querySelectorAll('.' + menu).forEach(function (button) {
         button.addEventListener('click', function () {
-            window.location.href = 'category.html?category=' + menu;
+            window.location.href = '/category?category=' + menu;
         });
     });
 }
@@ -132,7 +132,7 @@ switch (category) {
         addNewCategory('스포츠 용역', sports);
         break;
     default:
-        alert('잘못된 접근입니다.');
+        alert('검색 내역이 없습니다.');
         break;
 }
 
@@ -215,10 +215,19 @@ function createCard(data) {
     newCard.appendChild(cardTitle);
 
     newCard.addEventListener('click', function () {
-        window.location.href = 'detail.html'; // 현재 클릭한 Card에 대한 상세 페이지 URL로 이동
+        window.location.href = '/detail'; // 현재 클릭한 Card에 대한 상세 페이지 URL로 이동
     });
     
     return newCard;
 
     
 }
+var contentElements = document.querySelectorAll('.Card');
+// 가져온 각각의 content 요소에 대해 반복하여 클릭 이벤트 리스너를 추가
+contentElements.forEach(function (element) {
+  // 각 content 요소를 클릭했을 때 실행될 함수
+  element.addEventListener('click', function () {
+    // /detail 로 이동하는 코드
+    window.location.href = '/detail';
+  });
+});

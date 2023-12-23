@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>구했소</title>
-    <meta charset="UTF-8" name="viewport" content="width = device-width, initial-scale = 1">
+    <meta charset="UTF-8" name = "viewport" content = "width = device-width, initial-scale = 1">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/detail.css">
     <link rel="stylesheet" href="css/category.css">
 </head>
-
 <body>
     <div class="menu-container"> <!-- 메뉴바 -->
-        <a href="home.html"><img src="img/logo.jpg" alt="Logo" class="logo"></a>
-        <form action="category.html" class="search-container">
+        <a href="/login"><img src="img/logo.jpg" alt="Logo" class="logo"/></a>
+
+            <form action ="/category" class = "search-container">
             <button class="search-button">
-                <img src="img/search.png" alt="search-img" class="search-img">
+                <img src="img/search.png" alt="search-img" class="search-img"/>
             </button>
-            <input type="text" class="search-input" placeholder="검색어를 입력하세요">
+            <input type="text" class="search-input" placeholder="검색어를 입력하세요"> 
         </form>
         <div id=login>
             <button onclick="openPopup()" class="login-button">로그인</button>
-            <a href="signup.html" class="signup-button">회원가입</a>
+            <a href="/register" class="signup-button">회원가입</a>
         </div>
         <div id="popup" class="popup-overlay">
             <div class="popup-content">
                 <span onclick="closePopup()" class="close-btn">&times;</span>
                 <h2>로그인</h2>
-                <form action="login">
-                    <input type="text" name="id" placeholder="아이디">
-                    <input type="password" name="pw" placeholder="비밀번호">
-                    <input type="submit" value="로그인">
+                <form action="#" id = "loginForm">
+                    <input id = "id" type="text" name="id" placeholder="아이디">
+                    <input id = "password" type="password" name="pw" placeholder="비밀번호">
+                    <input id = "btn_login" type="submit" value="로그인">
                 </form>
             </div>
         </div>
-        <div id=logout>
-            <button id="logout-button" onclick="logout()">로그아웃</button>
-            <a href="mypage.html">마이페이지</a>
+        <div id = logout>
+            
+            <button id="logout-button"onclick="logout()">로그아웃</button>
+            <a href = "/mypage">마이페이지</a>
         </div>
     </div>
 
@@ -202,90 +203,84 @@
             </li>
         </ul>
     </div>
-    <div class=content-container>
-        <div class="category-container">
-            <div class="category-list">
-                <h3>카테고리</h3>
-                <select></select>
-                <h3 class="category-big">운동</h3>
-                <div class="category-small">
-                    <!--
-                    <button class="exercise pilates">필라테스</button>
-                    <button class="exercise pt">PT</button>
-                    <button class="exercise yoga">요가</button>
-                    <button class="exercise health">헬스</button>
-                    -->
+    <div class="detail-container">
+        <div class="explain-container">
+            <div class="banner">
+                <div class="banner-item item1"><img src="img/psy2.jpg" alt="psy" class="psy1" width=100% height=100%/></div>
+                <div class="banner-item item2"><img src="img/psy3.jpg" alt="psy" class="psy3" width=100% height=100%/></div>
+                <div class="banner-item item3"><img src="img/psy.jpg" alt="psy" class="psy3" width=100% height=100%/></div>
+                <div class="banner-item item4"><img src="img/psy4.jpg" alt="psy" class="psy3" width=100% height=100%/></div>
+                <div class="banner-item item5"><img src="img/psy5.jpg" alt="psy" class="psy3" width=100% height=100%/></div>
+                <div class="banner-prev-button banner-button">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.79999 12.6001L1.19999 7.0001" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M1.16156 7L6.80016 1.43887" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                 </div>
-                <h3 class="category-big">댄스, 뮤직</h3>
-                <div class="category-small">
-                    <!--
-                    <button class="music dance">댄스</button>
-                    <button class="music vocal">보컬</button>
-                    <button class="music guitar">기타</button>
-                    <button class="music piano">피아노</button>
-                    <button class="music violin">바이올린</button>
-                    <button class="music drum">드럼</button>
-                    -->
+                <div class="banner-next-button banner-button">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.2 1.3999L6.8 6.9999" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M6.83843 7L1.19983 12.5611" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                </div>
+                <ul class="banner-pagination"></ul>
+            </div>
+            <div class="explain-text">
+                <div class="explain-content">
+                        <h2>만족도 높은 보컬 레슨</h2><br>
+                        1. 흔들림 없는 음정 훈련
+                        <br> --- <br> --- <br>
+                        2. 돌고래보다 높은 고음 훈련
+                        <br> --- <br> --- <br>
+                        3. 누구보다 빠른 랩 훈련
+                        <br> --- <br> --- <br>
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="list">
-            <!-- 샘플 항목 -->
-            <div class="Card">
-                <div class="sample-image item1"><img src="img/tire3.jpg" width=100% height=100% alt="content-img"></div>
-                <p class="card-name">윈터 타이어</p>
-                <h4 class="card-title">겨울타이어 중요!</h4>
+        <div class="profile-container">
+            <div class="person-container">
+                <div class="like-profile">
+                <div class="person-img"><img src="img/psyprofile.jpg" alt="psy" width=100% height=100%/></div>
+                <div class="review-container-mobile">
+                    <button onclick="reviewm()" class="review-button-mobile">좋아요 <span id ="numberm">0<span></span>건 🤍</button>
+                </div>
+                </div>
+                <div class="person-content content">
+                    <h3>싸이</h3>
+                    <ul>
+                        <li><h4>전화번호</h4><h5>010-1234-5678</h5></li>
+                        <li><h4>이메일</h4><h5>psy@naver.com</h5></li>
+                        <li class="history1">🎶P-nation 대표(약력1)</li>
+                        <li class="history1">🎶싸이쇼 티켓 매진(약력2)</li>
+                        <li class="history1">🎶강남 스타일(약력3)</li>
+                        <li class="history1">🎶흠뻑쇼 대박(약력4)</li>
+                    </ul>
+                </div>
+                <div class="explain-text-mobile">
+                    <div class="explain-content-mobile">
+                        <p>
+                            <h2>만족도 높은 보컬 레슨</h2><br>
+                            1. 흔들림 없는 음정 훈련
+                            <br> --- <br> --- <br>
+                            2. 돌고래보다 높은 고음 훈련
+                            <br> --- <br> --- <br>
+                            3. 누구보다 빠른 랩 훈련
+                            <br> --- <br> --- <br>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="Card">
-                <div class="sample-image item1"><img src="img/tire2.jpg" width=100% height=100% alt="content-img"></div>
-                <p class="card-name">대장간모터스</p>
-                <h4 class="card-title">타이어 즉시 교체</h4>
+            <div class="review">
+                <div class="review-container">
+                    <button onclick="review()" class="review-button">좋아요 <span id ="number">0<span></span>건 🤍</button>
+                </div>
             </div>
-            <div class="Card">
-                <div class="sample-image item1"><img src="img/tire4.jpg" width=100% height=100% alt="content-img"></div>
-                <p class="card-name">빠른타이어</p>
-                <h4 class="card-title">빠른 타이어 교체!</h4>
-            </div>
-            <div class="Card">
-                <div class="sample-image item1"><img src="img/tire5.jpg" width=100% height=100% alt="content-img"></div>
-                <p class="card-name">카정비소</p>
-                <h4 class="card-title">타이어 상담 해드려요</h4>
-            </div>
-            <div class="Card">
-                <div class="sample-image item1"><img src="img/tire6.jpg" width=100% height=100% alt="content-img"></div>
-                <p class="card-name">허리타이어</p>
-                <h4 class="card-title">타이어가 찾아가요!</h4>
-            </div>
-            <div class="Card">
-                <div class="sample-image item1"><img src="img/tire.jpg" width=100% height=100% alt="content-img"></div>
-                <p class="card-name">타이어 전문 정비소</p>
-                <h4 class="card-title">타이어 검사해드립니다</h4>
-            </div>
-            <div class="Card">
-                <div class="sample-image item1"><img src="img/tire7.jpg" width=100% height=100% alt="content-img"></div>
-                <p class="card-name">i 카센터</p>
-                <h4 class="card-title">내향인을 위한 타이어</h4>
-            </div>
-            <div class="Card">
-                <div class="sample-image item1"><img src="img/tire8.jpg" width=100% height=100% alt="content-img"></div>
-                <p class="card-name">쉬운타이어</p>
-                <h4 class="card-title">타이어 찾아가세요</h4>
-            </div>
-            <div class="Card">
-                <div class="sample-image item1"><img src="img/tire9.jpg" width=100% height=100% alt="content-img"></div>
-                <p class="card-name">싸다싸카센터</p>
-                <h4 class="card-title">타이어 전국 최저가</h4>
-            </div>
-            <!--여기까지 샘플-->
-
-
         </div>
     </div>
 
-    <!-- 데이터 추가 샘플 버튼 -->
-    <button id="createCardButton" onclick = "createCardButton()">카드 생성</button>
-    
-    <!-- 모바일 햄버거 버튼 -->
+<!--임시 테스트 버튼 -->
+    <button id = "tempButton">테스트 버튼</button>
     <div class="navbar_overlay"></div>
 
     <div class="navbar_burger">
@@ -328,21 +323,18 @@
             </button>
         </div>
 
-        <a href="home.html">공지사항</a>
-        <a href="home.html">FAQ</a>
-        <a href="home.html">이벤트</a>
+        <a href="/login">공지사항</a>
+        <a href="/login">FAQ</a>
+        <a href="/login">이벤트</a>
         <div class="navbar_burger_back">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg"
                 viewBox="0 0 16 16">
                 <path
                     d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
             </svg>
-
         </div>
     </div>
-
-    <script src="js/category.js"></script>
-    <script src="js/global.js"></script>
+    <script src="/js/home/detail.js"></script>
+    <script src="/js/home/global.js"></script>
 </body>
-
 </html>

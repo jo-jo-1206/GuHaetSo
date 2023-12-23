@@ -1,3 +1,70 @@
+console.log("hello register");
+
+const input_name = document.querySelector("#name");
+const input_email = document.querySelector("#email");
+const input_id = document.querySelector("#id");
+const input_password = document.querySelector("#password");
+const input_confirmPassword = document.querySelector("#confirm-password");
+
+const btnRegister = document.querySelector("#btn_register");
+
+function register() {
+    const errorMessages = document.querySelectorAll('.error-message');
+    const submitButton = document.querySelector('.submit-button');
+
+    console.log(submitButton.classList.contains('filled'));
+    if (errorMessages.length > 0 || !submitButton.classList.contains('filled')) {
+        alert('입력 항목을 확인해주세요.');
+        return;
+    }
+
+    if (input_password.value != input_confirmPassword.value) {
+        return alert("비밀번호를 확인해주세요.");
+    }
+
+    const req = {
+        user_id: input_id.value,
+        user_name: input_name.value,
+        user_password: input_password.value,
+        user_email: input_email.value,
+    };
+
+    console.log(req);
+    fetch("/register", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(req),
+    })
+        .then((res) => res.json())
+        .then((res) => {
+            if (res.success) {
+                // 회원가입 성공
+                // 회원가입 완료 창을 보여줍니다.
+                const successDialog = document.createElement('div');
+                successDialog.innerHTML = `
+        <div class="complete-signup">
+            <h2>회원가입이 완료되었습니다!</h2>
+            <button id="okButton">메인 페이지로 이동</button>
+        </div>
+    `;
+                document.body.appendChild(successDialog);
+                const okButton = document.getElementById('okButton');
+                okButton.addEventListener('click', function () {
+                    location.href = '/login';
+                });
+
+            } else {
+                // 회원가입 실패
+                alert(res.msg);
+            }
+        })
+        .catch((err) => {
+            console.error(new Error("회원가입 중 에러 발생", err));
+        });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const submitButton = document.querySelector('.submit-button');
     const form = document.getElementById('signup-form');
@@ -73,38 +140,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-
-    form.addEventListener('submit', function (event) {
-        event.preventDefault(); // 폼 제출 동작 막기
-
-        
-    const errorMessages = document.querySelectorAll('.error-message');
-    const submitButton = document.querySelector('.submit-button');
-    
-    console.log(submitButton.classList.contains('filled'));
-    if (errorMessages.length > 0 || !submitButton.classList.contains('filled')) {
-        alert('입력 항목을 확인해주세요.'); 
-        return;
-    }
-
-        // 여기에 회원가입 처리 로직을 추가합니다.
-        // (예: 서버로 회원가입 데이터를 전송하는 등의 작업)
-
-        // 회원가입 완료 창을 보여줍니다.
-        const successDialog = document.createElement('div');
-        successDialog.innerHTML = `
-            <div class="complete-signup">
-                <h2>회원가입이 완료되었습니다!</h2>
-                <button id="okButton">메인 페이지로 이동</button>
-            </div>
-        `;
-        document.body.appendChild(successDialog);
-
-        // OK 버튼 클릭 시 home.html로 이동합니다.
-        const okButton = document.getElementById('okButton');
-        okButton.addEventListener('click', function () {
-            window.location.href = 'home.html';
-        });
+    btnRegister.addEventListener("click", function (event) {
+        event.preventDefault();
+        register();
     });
 });
 

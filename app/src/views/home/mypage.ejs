@@ -10,7 +10,7 @@
 
 <body>
     <div class="menu-container"> <!-- 메뉴바 -->
-        <a href="home.html"><img src="img/logo.jpg" alt="Logo" class="logo"></a>
+        <a href="/login"><img src="img/logo.jpg" alt="Logo" class="logo"></a>
         <div id=logout>
             <button class="addPost" onclick="postAdd()">새 게시글 등록</button>
         </div>
@@ -59,7 +59,7 @@
                 </label>
             </div>
             <input type="file" name="inputfile" id="inputfile" accept="image/*" onchange="fileUpload(this)">
-            <input type="submit" value="등록하기">
+            <input id="btn_registerPoster" type="submit" value="등록하기">
         </form>
     </div>
     <div class="post">
@@ -129,7 +129,7 @@
                                 <option value="Jeju">제주</option>
                             </select>
 
-                            <input type="submit" value="수정하기">
+                            <input id="btn_updateUser" type="submit" value="수정하기">
                         </div>
                     </div>
                 </form>
@@ -180,9 +180,9 @@
                 </button>
             </div>
 
-            <a href="home.html">공지사항</a>
-            <a href="home.html">FAQ</a>
-            <a href="home.html">이벤트</a>
+            <a href="/login">공지사항</a>
+            <a href="/login">FAQ</a>
+            <a href="/login">이벤트</a>
             <div class="navbar_burger_back">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg"
                     viewBox="0 0 16 16">
@@ -192,7 +192,6 @@
 
             </div>
         </div>
-        <script src="js/mypage.js"></script>
-
-        <script src="js/global.js"></script>
+        <script src="/js/home/mypage.js"></script>
+        <!-- <script src="/js/home/global.js"></script> -->
 </body>
